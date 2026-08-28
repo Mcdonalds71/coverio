@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/styles.css?v=4" />
+<link rel="stylesheet" href="assets/styles.css?v=11" />
 <link rel="icon" type="image/png" href="assets/logo-mark.png?v=1">
 </head>
 <body>
@@ -27,11 +27,11 @@
       <a href="#market">Market</a>
       <a href="#roadmap">Roadmap</a>
       <a href="login.html" class="btn btn--line nav__m-only nav__m-login">Log in</a>
-      <a href="#demo" class="btn btn--mint nav__m-only nav__m-demo">Get started</a>
+      <a href="#demo" class="btn btn--mint nav__m-only nav__m-demo">Start free</a>
     </nav>
     <div class="nav__cta">
       <a href="login.html" class="nav__login">Log in</a>
-      <a href="#demo" class="btn btn--mint">Get started</a>
+      <a href="#demo" class="btn btn--mint">Start free</a>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
@@ -41,29 +41,52 @@
 <div class="nav__scrim" id="navScrim"></div>
 
 <section class="hero">
+  <div class="hero__halo" aria-hidden="true"></div>
+  <div class="hero__topo" aria-hidden="true">
+    <svg viewBox="0 0 1440 620" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="topoStroke" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#2FBF9E" stop-opacity="0"/>
+          <stop offset="18%" stop-color="#2FBF9E" stop-opacity=".55"/>
+          <stop offset="46%" stop-color="#BFF3E6" stop-opacity=".85"/>
+          <stop offset="74%" stop-color="#2FBF9E" stop-opacity=".5"/>
+          <stop offset="100%" stop-color="#2FBF9E" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <g class="topo-g">
+        <path class="topo-line" opacity=".85" d="M-40,180 C180,128 340,214 520,164 S860,122 1000,174 S1340,196 1480,170"/>
+        <path class="topo-line" opacity=".80" d="M-40,206 C180,156 340,239 520,191 S860,150 1000,200 S1340,221 1480,196"/>
+        <path class="topo-line" opacity=".76" d="M-40,232 C180,184 340,264 520,217 S860,178 1000,226 S1340,247 1480,223"/>
+        <path class="topo-line" opacity=".72" d="M-40,258 C180,212 340,288 520,244 S860,206 1000,253 S1340,272 1480,249"/>
+        <path class="topo-line" opacity=".68" d="M-40,284 C180,240 340,313 520,270 S860,235 1000,279 S1340,298 1480,275"/>
+        <path class="topo-line" opacity=".64" d="M-40,310 C180,267 340,338 520,297 S860,262 1000,305 S1340,323 1480,302"/>
+        <path class="topo-line" opacity=".60" d="M-40,336 C180,295 340,363 520,324 S860,291 1000,331 S1340,348 1480,328"/>
+        <path class="topo-line" opacity=".56" d="M-40,362 C180,324 340,387 520,350 S860,319 1000,358 S1340,374 1480,355"/>
+        <path class="topo-line" opacity=".52" d="M-40,388 C180,352 340,412 520,377 S860,347 1000,384 S1340,399 1480,381"/>
+        <path class="topo-line" opacity=".48" d="M-40,414 C180,379 340,437 520,403 S860,375 1000,410 S1340,425 1480,407"/>
+        <path class="topo-line" opacity=".44" d="M-40,440 C180,407 340,461 520,430 S860,403 1000,436 S1340,450 1480,434"/>
+        <path class="topo-line" opacity=".40" d="M-40,466 C180,435 340,486 520,457 S860,432 1000,462 S1340,475 1480,460"/>
+        <path class="topo-line" opacity=".35" d="M-40,492 C180,463 340,511 520,483 S860,460 1000,489 S1340,501 1480,486"/>
+        <path class="topo-line" opacity=".30" d="M-40,518 C180,491 340,536 520,510 S860,488 1000,515 S1340,526 1480,513"/>
+        <path class="topo-line" opacity=".25" d="M-40,544 C180,519 340,560 520,536 S860,516 1000,541 S1340,552 1480,539"/>
+        <path class="topo-line" opacity=".20" d="M-40,570 C180,547 340,585 520,563 S860,544 1000,567 S1340,577 1480,565"/>
+      </g>
+    </svg>
+  </div>
+
   <div class="container hero__inner">
-    <div class="hero__copy reveal">
-      <h1>Price the risk. <span class="text-accent">Not the guesswork.</span></h1>
-      <p class="hero__sub">Coverio reads submissions, prior claims, and inspection data with AI, and scores every policy for risk in minutes — so underwriters price faster without cutting corners.</p>
-      <div class="hero__actions">
-        <a href="#demo" class="btn btn--mint btn--lg">Get started
-          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#how" class="btn btn--line btn--lg">See how it works</a>
-      </div>
-      <p class="hero__note">No credit card · Data-protection ready · Built for underwriting teams</p>
+    <a href="#features" class="hero__badge reveal"><b>New</b> Portfolio risk reporting is live
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <h1 class="reveal" data-d="1">Price the risk. <span class="text-accent">Not the guesswork.</span></h1>
+    <p class="hero__sub reveal" data-d="2">Coverio reads submissions, prior claims, and inspection data with AI, and scores every policy for risk in minutes — so underwriters price faster without cutting corners.</p>
+    <div class="hero__actions reveal" data-d="3">
+      <a href="#demo" class="btn btn--mint btn--lg">Score your first submission
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#how" class="btn btn--line btn--lg">See how it works</a>
     </div>
-    <div class="risk-card reveal" data-d="2">
-      <span class="risk-card__ribbon"><i></i> Live MVP</span>
-      <div class="risk-card__top"><span>Submission #4471</span><span>Commercial property</span></div>
-      <div class="risk-card__num"><span class="count" data-to="94">0</span><span> / 100</span></div>
-      <div class="risk-bar"><div class="risk-bar__fill"></div></div>
-      <div class="risk-bar__labels"><span>High risk</span><span>Low risk</span></div>
-      <div class="risk-card__decision">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Approved — standard tier
-      </div>
-    </div>
+    <p class="hero__note reveal" data-d="4">No credit card · Data-protection ready · Built for underwriting teams</p>
   </div>
 </section>
 
@@ -78,7 +101,67 @@
   </div>
 </div>
 
-<section class="section" id="problem">
+<section class="section" id="capabilities">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">What you get</span>
+      <h2 class="h2">Three things every submission runs through</h2>
+    </div>
+    <div class="cap-grid">
+      <article class="card cap-card reveal" data-d="1">
+        <h3>It scores the risk</h3>
+        <p>Every submission rated against historical claims outcomes the moment it lands.</p>
+        <div class="cap-card__mock">
+          <div class="mk">
+            <div class="mk__row"><span>Submission #4471</span><span>Commercial property</span></div>
+            <div class="mk__score"><span class="count" data-to="94">0</span><small> / 100</small></div>
+            <div class="mk__bar"><i></i></div>
+            <div class="mk__verdict">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Approved — standard tier
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card cap-card reveal" data-d="2">
+        <h3>It reads the paperwork</h3>
+        <p>Inspection reports and application forms parsed into structured, checkable fields.</p>
+        <div class="cap-card__mock">
+          <div class="mk">
+            <div class="mk__row"><span>Inspection report</span><span>PDF · 14 pages</span></div>
+            <div class="mk__doc" style="margin-top:14px">
+              <div class="mk__docline"></div>
+              <div class="mk__docline mk__docline--m"></div>
+              <div class="mk__pull"><span>Roof age</span><b>18 years</b></div>
+              <div class="mk__docline mk__docline--s"></div>
+              <div class="mk__pull"><span>Sprinkler system</span><b>Present</b></div>
+              <div class="mk__docline mk__docline--m"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card cap-card reveal" data-d="3">
+        <h3>It shows the whole book</h3>
+        <p>Risk spread and loss-ratio trend across your portfolio, not just one policy.</p>
+        <div class="cap-card__mock">
+          <div class="mk">
+            <div class="mk__row"><span>Risk distribution</span><span>Last 90 days</span></div>
+            <div class="mk__bars" style="margin-top:16px">
+              <i style="height:34%"></i><i style="height:52%"></i><i style="height:44%"></i>
+              <i style="height:76%"></i><i class="hi" style="height:100%"></i><i style="height:68%"></i>
+              <i style="height:48%"></i><i style="height:30%"></i>
+            </div>
+            <div class="mk__legend"><span>High risk</span><b>Concentration: standard tier</b></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="problem">
   <div class="container">
     <div class="section-head section-head--center reveal">
       <span class="eyebrow">The problem</span>
@@ -86,16 +169,18 @@
       <p class="lead" style="margin-inline:auto">A submission can sit in a queue for days while a reviewer manually cross-checks claims history, inspection reports, and pricing tables.</p>
     </div>
     <div class="timeline-compare">
-      <div class="tl-col tl-col--slow reveal" data-d="1">
+      <div class="card tl-col tl-col--slow reveal" data-d="1">
         <div class="tl-col__head">Manual review</div>
+        <div class="tl-col__sub">3–5 days to a decision</div>
         <div class="tl-step"><span class="tl-step__dot"></span> Submission queued, waiting for a reviewer</div>
         <div class="tl-step"><span class="tl-step__dot"></span> Reviewer manually checks claims history</div>
         <div class="tl-step"><span class="tl-step__dot"></span> Inspection report read line by line</div>
         <div class="tl-step"><span class="tl-step__dot"></span> Pricing looked up in reference tables</div>
         <div class="tl-step"><span class="tl-step__dot"></span> Decision returned — 3 to 5 days later</div>
       </div>
-      <div class="tl-col tl-col--fast reveal" data-d="2">
+      <div class="card tl-col tl-col--fast reveal" data-d="2">
         <div class="tl-col__head">With Coverio</div>
+        <div class="tl-col__sub">Minutes to a decision</div>
         <div class="tl-step"><span class="tl-step__dot"></span> Submission ingested automatically</div>
         <div class="tl-step"><span class="tl-step__dot"></span> Claims history and inspection data scored by AI</div>
         <div class="tl-step"><span class="tl-step__dot"></span> Risk score and pricing tier suggested instantly</div>
@@ -106,53 +191,133 @@
   </div>
 </section>
 
-<section class="section section--soft" id="solution">
+<section class="section" id="solution">
   <div class="container">
-    <div class="section-head section-head--center reveal">
+    <div class="section-head reveal">
       <span class="eyebrow">The solution</span>
-      <h2 class="h2">One system to <span class="text-accent">ingest, score, and decide</span> — automatically.</h2>
-      <p class="lead" style="margin-inline:auto">Coverio sits on top of your submission pipeline and returns a risk score your underwriters can act on immediately.</p>
+      <h2 class="h2">One system to <span class="text-accent">ingest, score, and decide</span></h2>
+      <p class="lead">Coverio sits on top of your submission pipeline and returns a risk score your underwriters can act on immediately.</p>
     </div>
-    <div class="pipeline-h">
-      <div class="pipe-card reveal" data-d="1"><div class="pipe-card__n">01</div><h3>Ingest the submission</h3><p>Application forms, claims history, and inspection reports pulled in automatically.</p></div>
-      <div class="pipe-card reveal" data-d="2"><div class="pipe-card__n">02</div><h3>Score the risk</h3><p>AI scores the submission against prior claims patterns and risk factors.</p></div>
-      <div class="pipe-card reveal" data-d="3"><div class="pipe-card__n">03</div><h3>Decide with confidence</h3><p>A suggested pricing tier and decision, with the reasoning shown alongside it.</p></div>
+    <div class="flow-connected">
+      <div class="flow-connected__step reveal" data-d="1">
+        <span class="flow-connected__arrow"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="flow-connected__num">01</div>
+        <h3>Ingest the submission</h3>
+        <p>Application forms, claims history, and inspection reports pulled in automatically.</p>
+      </div>
+      <div class="flow-connected__step reveal" data-d="2">
+        <span class="flow-connected__arrow"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div class="flow-connected__num">02</div>
+        <h3>Score the risk</h3>
+        <p>AI scores the submission against prior claims patterns and risk factors.</p>
+      </div>
+      <div class="flow-connected__step reveal" data-d="3">
+        <div class="flow-connected__num">03</div>
+        <h3>Decide with confidence</h3>
+        <p>A suggested pricing tier and decision, with the reasoning shown alongside it.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="ai">
+<section class="section section--soft" id="ai">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">AI Technology</span>
       <h2 class="h2">Risk scoring is the engine, not a <span class="text-accent">dashboard feature.</span></h2>
-      <p class="lead">Coverio is built around a purpose-trained risk-scoring system for underwriting data.</p>
     </div>
-    <div class="spec-row-h">
-      <div class="spec-card reveal" data-d="1">
-        <div class="spec-card__k">Data in</div>
-        <h3>Every signal a submission carries</h3>
-        <p>Application data, prior claims, inspection reports, and property or asset records.</p>
-        <div class="tag-row"><span class="tag">Applications</span><span class="tag">Claims history</span></div>
+    <div class="ai-split">
+      <p class="ai-split__statement reveal" data-d="1">Coverio is built around a <em>purpose-trained risk-scoring engine</em> — not a chatbot wrapper glued onto an underwriting dashboard. Every submission runs through the same model, trained on real claims outcomes, so two reviewers never get two different answers.</p>
+      <div class="ai-spec-list reveal" data-d="2">
+        <div class="ai-spec-list__row">
+          <div class="ai-spec-list__k">Data in</div>
+          <h3>Every signal a submission carries</h3>
+          <p>Application data, prior claims, inspection reports, and property or asset records.</p>
+        </div>
+        <div class="ai-spec-list__row">
+          <div class="ai-spec-list__k">Data out</div>
+          <h3>A score, a tier, and the reasoning</h3>
+          <p>A risk score, a suggested pricing tier, and the flagged factors behind the decision.</p>
+        </div>
+        <div class="ai-spec-list__row">
+          <div class="ai-spec-list__k">Techniques</div>
+          <h3>Risk modeling &amp; document NLP</h3>
+          <p>Models trained on historical claims outcomes, with NLP for reading inspection reports.</p>
+        </div>
+        <div class="ai-spec-list__row">
+          <div class="ai-spec-list__k">Why scale matters</div>
+          <h3>A full submission scored in minutes</h3>
+          <p>Submission volume spikes at renewal season. GPU-accelerated inference keeps queues from backing up.</p>
+        </div>
       </div>
-      <div class="spec-card reveal" data-d="2">
-        <div class="spec-card__k">Data out</div>
-        <h3>A score, a tier, and the reasoning</h3>
-        <p>A risk score, a suggested pricing tier, and the flagged factors behind the decision.</p>
-        <div class="tag-row"><span class="tag">Risk score</span><span class="tag">Pricing tier</span></div>
-      </div>
-      <div class="spec-card reveal" data-d="3">
-        <div class="spec-card__k">Techniques</div>
-        <h3>Risk modeling &amp; document NLP</h3>
-        <p>Models trained on historical claims outcomes, with NLP for reading inspection reports.</p>
-        <div class="tag-row"><span class="tag">Risk modeling</span><span class="tag">Document NLP</span></div>
-      </div>
-      <div class="spec-card reveal" data-d="4">
-        <div class="spec-card__k">Why scale matters</div>
-        <h3>A full submission scored in minutes</h3>
-        <p>Submission volume spikes at renewal season. GPU-accelerated inference keeps queues from backing up.</p>
-        <div class="tag-row"><span class="tag">GPU inference</span></div>
-      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow">How it works</span>
+      <h2 class="h2">From submission to decision in four steps</h2>
+      <p class="lead" style="margin-inline:auto">No migration project. Coverio reads what you already receive and hands back a scored decision.</p>
+    </div>
+    <div class="hiw-grid">
+      <article class="card hiw-card reveal" data-d="1">
+        <div class="hiw-card__art">
+          <div class="art-src">
+            <span class="art-ico"><svg viewBox="0 0 24 24" fill="none"><path d="M6 4h9l4 4v12H6z" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            Submission intake <span>Connected</span>
+          </div>
+          <div class="art-src">
+            <span class="art-ico"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 10h16" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            Claims history <span>Connected</span>
+          </div>
+          <div class="art-src">
+            <span class="art-ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            Inspection reports <span>Syncing</span>
+          </div>
+        </div>
+        <div class="hiw-card__n">STEP 01</div>
+        <h3>Connect your pipeline</h3>
+        <p>Link your submission intake or upload directly — nothing to migrate.</p>
+      </article>
+
+      <article class="card hiw-card reveal" data-d="2">
+        <div class="hiw-card__art">
+          <div class="art-gauge">
+            <div class="art-gauge__n">94<small> / 100</small></div>
+            <div class="art-gauge__track"><i></i></div>
+            <div class="art-gauge__cap">Scored against 3,100 prior claims outcomes</div>
+          </div>
+        </div>
+        <div class="hiw-card__n">STEP 02</div>
+        <h3>AI scores it</h3>
+        <p>Risk score and pricing tier generated automatically, with the factors shown.</p>
+      </article>
+
+      <article class="card hiw-card reveal" data-d="3">
+        <div class="hiw-card__art">
+          <div class="art-flag art-flag--warn"><i></i> Roof age exceeds tier threshold <span>Review</span></div>
+          <div class="art-flag"><i></i> Prior claims within range <span>Clear</span></div>
+          <div class="art-flag"><i></i> Sprinkler system verified <span>Clear</span></div>
+        </div>
+        <div class="hiw-card__n">STEP 03</div>
+        <h3>Underwriter reviews</h3>
+        <p>Only the flagged items need a second look. The rest is already checked.</p>
+      </article>
+
+      <article class="card hiw-card reveal" data-d="4">
+        <div class="hiw-card__art">
+          <div class="art-stamp">
+            <div class="art-stamp__k">Decision returned</div>
+            <div class="art-stamp__v">Approved · Standard tier</div>
+            <div class="art-stamp__t">Logged to the audit trail · 4 min 12 s after intake</div>
+          </div>
+        </div>
+        <div class="hiw-card__n">STEP 04</div>
+        <h3>Decision returned</h3>
+        <p>Minutes after submission, not days — and every step is auditable.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -163,33 +328,33 @@
       <span class="eyebrow">Product features</span>
       <h2 class="h2">Everything a lean underwriting team needs to move faster</h2>
     </div>
-    <div class="feat-grid3">
-      <div class="feat-card2 reveal" data-d="1"><div class="feat-card2__ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Risk Scoring</h3><p>Every submission scored against historical claims patterns.</p></div>
-      <div class="feat-card2 reveal" data-d="2"><div class="feat-card2__ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M6 4h9l4 4v12H6z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Document Reading</h3><p>Inspection reports and application forms read and understood automatically.</p></div>
-      <div class="feat-card2 reveal" data-d="3"><div class="feat-card2__ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><rect x="4" y="5" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div><h3>Pricing Suggestions</h3><p>A suggested pricing tier based on the risk score.</p></div>
-      <div class="feat-card2 reveal" data-d="1"><div class="feat-card2__ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 9v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Priority Queue</h3><p>High-risk or unusual submissions routed to senior underwriters first.</p></div>
-      <div class="feat-card2 reveal" data-d="2"><div class="feat-card2__ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 19l5-6 4 3 7-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Portfolio Reporting</h3><p>Risk distribution and loss-ratio trends across your whole book.</p></div>
-      <div class="feat-card2 reveal" data-d="3"><div class="feat-card2__ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7z" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Audit Trail</h3><p>Every score and decision logged for compliance review.</p></div>
+    <div class="feat-split">
+      <div class="card feat-hero-card reveal" data-d="1">
+        <div class="feat-hero-card__ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg></div>
+        <h3>Risk Scoring</h3>
+        <p>Every submission scored against historical claims patterns the moment it's ingested — the core of what Coverio does.</p>
+        <div class="feat-hero-card__mini">
+          <div class="mk" style="border-radius:12px;border-bottom:1px solid var(--line)">
+            <div class="mk__row"><span>Scored today</span><span>Avg. 4m 12s</span></div>
+            <div class="mk__bars" style="margin-top:14px;height:74px">
+              <i style="height:40%"></i><i style="height:62%"></i><i style="height:50%"></i>
+              <i class="hi" style="height:96%"></i><i style="height:70%"></i><i style="height:44%"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feat-list reveal" data-d="2">
+        <div class="feat-list__row"><div class="feat-list__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M6 4h9l4 4v12H6z" stroke="currentColor" stroke-width="1.8"/></svg></div><div><h3>Document Reading</h3><p>Inspection reports and application forms read and understood automatically.</p></div></div>
+        <div class="feat-list__row"><div class="feat-list__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><rect x="4" y="5" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><h3>Pricing Suggestions</h3><p>A suggested pricing tier based on the risk score.</p></div></div>
+        <div class="feat-list__row"><div class="feat-list__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M12 9v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg></div><div><h3>Priority Queue</h3><p>High-risk or unusual submissions routed to senior underwriters first.</p></div></div>
+        <div class="feat-list__row"><div class="feat-list__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M4 19l5-6 4 3 7-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>Portfolio Reporting</h3><p>Risk distribution and loss-ratio trends across your whole book.</p></div></div>
+        <div class="feat-list__row"><div class="feat-list__ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7z" stroke="currentColor" stroke-width="1.8"/></svg></div><div><h3>Audit Trail</h3><p>Every score and decision logged for compliance review.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="how">
-  <div class="container">
-    <div class="section-head section-head--center reveal">
-      <span class="eyebrow">How it works</span>
-      <h2 class="h2">From submission to decision in four steps</h2>
-    </div>
-    <div class="how-row">
-      <div class="how-card reveal" data-d="1"><div class="how-card__n">01</div><h3>Connect your pipeline</h3><p>Link your submission intake or upload directly.</p></div>
-      <div class="how-card reveal" data-d="2"><div class="how-card__n">02</div><h3>AI scores it</h3><p>Risk score and pricing tier generated automatically.</p></div>
-      <div class="how-card reveal" data-d="3"><div class="how-card__n">03</div><h3>Underwriter reviews</h3><p>Only flagged items need a second look.</p></div>
-      <div class="how-card reveal" data-d="4"><div class="how-card__n">04</div><h3>Decision returned</h3><p>Minutes after submission, not days.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--soft" id="tech">
+<section class="section" id="tech">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Technology &amp; Infrastructure</span>
@@ -204,7 +369,7 @@
   </div>
 </section>
 
-<section class="section" id="market">
+<section class="section section--soft" id="market">
   <div class="container market-cols">
     <div class="reveal">
       <span class="eyebrow">Market opportunity</span>
@@ -218,23 +383,23 @@
   </div>
 </section>
 
-<section class="section section--soft" id="traction">
+<section class="section" id="traction">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Traction &amp; MVP status</span>
+      <span class="eyebrow">Traction &amp; product status</span>
       <h2 class="h2">Early, but real</h2>
       <p class="lead">Coverio is live and in active use across a first cohort of organizations. Real, current figures — reported honestly.</p>
     </div>
     <div class="traction-asym">
-      <div class="traction-big reveal" data-d="1"><div class="traction-big__num"><span class="count" data-to="94">0</span>%</div><div class="traction-big__label">scoring accuracy against outcomes</div></div>
-      <div class="traction-sm reveal" data-d="2"><div class="traction-sm__num"><span class="count" data-to="6">0</span></div><div class="traction-sm__label">organizations live</div></div>
-      <div class="traction-sm reveal" data-d="3"><div class="traction-sm__num"><span class="count" data-to="3100">0</span>+</div><div class="traction-sm__label">submissions scored</div></div>
+      <div class="card traction-big reveal" data-d="1"><div class="traction-big__num"><span class="count" data-to="94">0</span>%</div><div class="traction-big__label">scoring accuracy against outcomes</div></div>
+      <div class="card traction-sm reveal" data-d="2"><div class="traction-sm__num"><span class="count" data-to="6">0</span></div><div class="traction-sm__label">organizations live</div></div>
+      <div class="card traction-sm reveal" data-d="3"><div class="traction-sm__num"><span class="count" data-to="3100">0</span>+</div><div class="traction-sm__label">submissions scored</div></div>
     </div>
     <p class="banner reveal"><b>Our focus:</b> cut time-to-decision on standard submissions by up to 80%.</p>
   </div>
 </section>
 
-<section class="section" id="roadmap">
+<section class="section section--soft" id="roadmap">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Roadmap</span>
@@ -250,7 +415,7 @@
   </div>
 </section>
 
-<section class="section section--soft" id="team">
+<section class="section" id="team">
   <div class="container">
     <div class="section-head section-head--center reveal">
       <span class="eyebrow">Team</span>
@@ -258,8 +423,8 @@
       <p class="lead" style="margin-inline:auto">A small team of engineers and underwriting specialists.</p>
     </div>
     <div class="team-row4">
-      <div class="member-card reveal" data-d="1">
-        <div class="member-card__ph">AU</div>
+      <div class="card member-card reveal" data-d="1">
+        <div class="member-card__ph"><img src="assets/team/adanna-uzo.jpg" alt="Adanna Uzo"></div>
         <h3>Adanna Uzo</h3>
         <div class="role">Founder &amp; CEO</div>
         <p>Leads Coverio's mission to help underwriting teams price risk faster, without cutting corners.</p>
@@ -269,8 +434,8 @@
           <a href="mailto:adanna@coverio.io" class="li" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg></a>
         </div>
       </div>
-      <div class="member-card reveal" data-d="2">
-        <div class="member-card__ph">KO</div>
+      <div class="card member-card reveal" data-d="2">
+        <div class="member-card__ph"><img src="assets/team/kenechukwu-obi.jpg" alt="Kenechukwu Obi"></div>
         <h3>Kenechukwu Obi</h3>
         <div class="role">Co-founder &amp; CTO</div>
         <p>Leads Coverio's risk-scoring models, document-AI pipeline, and cloud infrastructure.</p>
@@ -282,53 +447,81 @@
   </div>
 </section>
 
-<section class="section" id="demo">
+<div class="cta-wrap" id="demo">
   <div class="container">
-    <div class="cta-card2 reveal">
-      <div>
-        <span class="eyebrow">Get started</span>
-        <h2 class="h2" style="margin-top:14px">See Coverio on your own submissions in 20 minutes</h2>
-        <p class="lead">Book a walkthrough — no commitment. We'll score a sample submission live.</p>
-      </div>
-      <div>
-        <form class="cta-card2__form" id="demoForm" novalidate>
-          <input id="email" type="email" placeholder="you@company.com" required />
-          <button type="submit" class="btn btn--mint btn--block">Get started</button>
+    <section class="cta-slab reveal" id="ctaSlab">
+      <div class="cta-slab__bleed" aria-hidden="true"></div>
+      <div class="cta-slab__inner">
+        <h2>Turn every submission into a decision</h2>
+        <p>See Coverio score a sample of your own submissions in 20 minutes. No commitment.</p>
+        <form class="cta-slab__form" id="demoForm" novalidate>
+          <input id="email" type="email" placeholder="you@company.com" aria-label="Work email" required />
+          <button type="submit" class="btn btn--white btn--lg">Start free</button>
         </form>
-        <p class="cta-card2__note">By submitting you agree to our <a href="privacy.html" style="color:rgba(255,255,255,.7)">Privacy Policy</a>. We never sell your data.</p>
+        <p class="cta-slab__note">By submitting you agree to our <a href="privacy.html">Privacy Policy</a>. We never sell your data.</p>
+        <p class="form__ok">Thanks — we'll be in touch shortly to set up your walkthrough.</p>
       </div>
-    </div>
+    </section>
   </div>
-</section>
+</div>
 
-<footer class="footer">
+<div class="footer-zone">
   <div class="container">
-    <div class="footer__brand-row">
-      <div>
-        <a href="index.html" class="brand">
-          <span class="brand__mark"><img src="assets/logo-mark.png?v=1" alt="Coverio logo"></span>
-          Coverio
-        </a>
-        <p class="footer__about">AI underwriting risk scoring — price the risk, not the guesswork.</p>
+    <footer class="footer">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="brand">
+            <span class="brand__mark"><img src="assets/logo-mark.png?v=1" alt="Coverio logo"></span>
+            Coverio
+          </a>
+          <p class="footer__about">AI underwriting risk scoring — Coverio reads every submission and prices the risk, not the guesswork.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.3H4.8V19h2.3V9.3zM5.95 5.4a1.35 1.35 0 10-.05 2.7 1.35 1.35 0 00.05-2.7zM19.2 19h-2.3v-4.7c0-1.2-.43-1.98-1.5-1.98-.82 0-1.3.55-1.52 1.08-.08.19-.1.45-.1.72V19h-2.3s.03-8.02 0-8.85h2.3v1.25c.3-.47.85-1.14 2.08-1.14 1.52 0 2.66.99 2.66 3.13V19z"/></svg></a>
+            <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3h3l-7 8 8 10h-6l-5-6-5 6H3l7.5-9L3 3h6l4.5 5.5z"/></svg></a>
+            <a href="mailto:hello@coverio.io" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#ai">AI technology</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#traction">Traction</a></li>
+            <li><a href="#demo">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="signup.html">Create account</a></li>
+            <li><a href="privacy.html#data">Data protection</a></li>
+            <li><a href="#capabilities">What you get</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer__socials">
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.3H4.8V19h2.3V9.3zM5.95 5.4a1.35 1.35 0 10-.05 2.7 1.35 1.35 0 00.05-2.7zM19.2 19h-2.3v-4.7c0-1.2-.43-1.98-1.5-1.98-.82 0-1.3.55-1.52 1.08-.08.19-.1.45-.1.72V19h-2.3s.03-8.02 0-8.85h2.3v1.25c.3-.47.85-1.14 2.08-1.14 1.52 0 2.66.99 2.66 3.13V19z"/></svg></a>
-        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3h3l-7 8 8 10h-6l-5-6-5 6H3l7.5-9L3 3h6l4.5 5.5z"/></svg></a>
-        <a href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      <p class="footer__disclaimer">Coverio helps teams score and price risk. It does not guarantee underwriting outcomes, and AI-generated scores should always be reviewed by a licensed underwriter before a policy is issued.</p>
+      <div class="footer__bottom">
+        <span>© 2026 Coverio Labs Ltd. All rights reserved.</span>
+        <div class="footer__bottom-links">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
       </div>
-    </div>
-    <div class="footer__linkrow">
-      <div><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#how">How it works</a></li><li><a href="#ai">AI technology</a></li><li><a href="#roadmap">Roadmap</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="#team">Team</a></li><li><a href="#market">Market</a></li><li><a href="#demo">Get started</a></li><li><a href="login.html">Log in</a></li></ul></div>
-      <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li><li><a href="privacy.html#data">Data protection</a></li><li><a href="#demo">Contact</a></li></ul></div>
-    </div>
-    <p class="footer__disclaimer">Coverio helps teams score and price risk. It does not guarantee underwriting outcomes, and AI-generated scores should always be reviewed by a licensed underwriter before a policy is issued.</p>
-    <div class="footer__bottom">
-      <span>© 2026 Coverio Labs Ltd. All rights reserved.</span>
-    </div>
+    </footer>
   </div>
-</footer>
+  <div class="footer__wordmark" aria-hidden="true"><span>Coverio</span></div>
+</div>
 
-<script src="assets/app.js?v=1"></script>
+<script src="assets/app.js?v=2"></script>
 </body>
 </html>
