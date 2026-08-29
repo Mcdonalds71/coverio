@@ -7,7 +7,7 @@
 <meta name="description" content="Coverio uses AI to score insurance submissions for risk in minutes, not days — so underwriters price policies faster without cutting corners." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/styles.css?v=11" />
 <link rel="icon" type="image/png" href="assets/logo-mark.png?v=1">
 </head>
@@ -103,60 +103,35 @@
 
 <section class="section" id="capabilities">
   <div class="container">
-    <div class="section-head section-head--center reveal">
-      <span class="eyebrow">What you get</span>
-      <h2 class="h2">Three things every submission runs through</h2>
-    </div>
-    <div class="cap-grid">
-      <article class="card cap-card reveal" data-d="1">
-        <h3>It scores the risk</h3>
-        <p>Every submission rated against historical claims outcomes the moment it lands.</p>
-        <div class="cap-card__mock">
-          <div class="mk">
-            <div class="mk__row"><span>Submission #4471</span><span>Commercial property</span></div>
-            <div class="mk__score"><span class="count" data-to="94">0</span><small> / 100</small></div>
-            <div class="mk__bar"><i></i></div>
-            <div class="mk__verdict">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Approved — standard tier
-            </div>
+    <div class="score-editorial">
+      <div class="score-editorial__head reveal">
+        <span class="eyebrow">how it works</span>
+        <h2 class="h2">From submission to scored risk<br>in minutes, not days.</h2>
+        <p class="lead">Coverio reads what experienced underwriters read, extracts the signals that predict loss, and returns a score your team can act on immediately.</p>
+      </div>
+      <div class="score-steps">
+        <div class="score-step reveal" data-d="1">
+          <span class="score-step__n">01</span>
+          <div class="score-step__body">
+            <h3>Submission ingested</h3>
+            <p>Application forms, inspection reports, prior claims data — parsed automatically on arrival. No manual data entry, no rekeying.</p>
           </div>
         </div>
-      </article>
-
-      <article class="card cap-card reveal" data-d="2">
-        <h3>It reads the paperwork</h3>
-        <p>Inspection reports and application forms parsed into structured, checkable fields.</p>
-        <div class="cap-card__mock">
-          <div class="mk">
-            <div class="mk__row"><span>Inspection report</span><span>PDF · 14 pages</span></div>
-            <div class="mk__doc" style="margin-top:14px">
-              <div class="mk__docline"></div>
-              <div class="mk__docline mk__docline--m"></div>
-              <div class="mk__pull"><span>Roof age</span><b>18 years</b></div>
-              <div class="mk__docline mk__docline--s"></div>
-              <div class="mk__pull"><span>Sprinkler system</span><b>Present</b></div>
-              <div class="mk__docline mk__docline--m"></div>
-            </div>
+        <div class="score-step reveal" data-d="2">
+          <span class="score-step__n">02</span>
+          <div class="score-step__body">
+            <h3>Risk signals extracted</h3>
+            <p>The AI reads what experienced underwriters look for: property age, construction type, claims frequency, occupancy class, geographic exposure, and prior loss patterns.</p>
           </div>
         </div>
-      </article>
-
-      <article class="card cap-card reveal" data-d="3">
-        <h3>It shows the whole book</h3>
-        <p>Risk spread and loss-ratio trend across your portfolio, not just one policy.</p>
-        <div class="cap-card__mock">
-          <div class="mk">
-            <div class="mk__row"><span>Risk distribution</span><span>Last 90 days</span></div>
-            <div class="mk__bars" style="margin-top:16px">
-              <i style="height:34%"></i><i style="height:52%"></i><i style="height:44%"></i>
-              <i style="height:76%"></i><i class="hi" style="height:100%"></i><i style="height:68%"></i>
-              <i style="height:48%"></i><i style="height:30%"></i>
-            </div>
-            <div class="mk__legend"><span>High risk</span><b>Concentration: standard tier</b></div>
+        <div class="score-step reveal" data-d="3">
+          <span class="score-step__n">03</span>
+          <div class="score-step__body">
+            <h3>Score returned with reasoning</h3>
+            <p>A risk score and recommended pricing tier — with the specific factors that drove it. Underwriters review, override if needed, and stay accountable for every decision.</p>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>

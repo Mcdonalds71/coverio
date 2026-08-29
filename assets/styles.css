@@ -1,4 +1,4 @@
-/* Coverio — AI underwriting risk scoring. Dark studio theme. */
+﻿/* Coverio â€” AI underwriting risk scoring. Dark studio theme. */
 :root {
   --ink-950: #07121E;
   --ink-900: #0B1B2B;
@@ -20,7 +20,7 @@
   --radius-sm: 10px;
   --radius-lg: 28px;
   --shadow: 0 30px 70px -32px rgba(0,0,0,.7);
-  --font-head: "Manrope", sans-serif;
+  --font-head: "Playfair Display", Georgia, serif;
   --font-body: "Inter", sans-serif;
   --maxw: 1180px;
   --gutter: 24px;
@@ -181,7 +181,7 @@ p { margin: 0; }
 .hiw-card p { margin-top: 7px; color: var(--txt); font-size: .88rem; }
 /* art: source rows */
 .art-src { display: flex; align-items: center; gap: 11px; background: rgba(255,255,255,.045); border: 1px solid var(--line-soft); border-radius: 9px; padding: 10px 12px; font-size: .82rem; color: rgba(255,255,255,.8); }
-/* only the trailing status label pushes right — not the leading icon, which is also a span */
+/* only the trailing status label pushes right â€” not the leading icon, which is also a span */
 .art-src > span:last-child { margin-left: auto; font-size: .72rem; color: var(--mint-400); font-weight: 700; }
 .art-ico { width: 26px; height: 26px; border-radius: 7px; background: rgba(47,191,158,.14); color: var(--mint-400); display: grid; place-items: center; flex: none; }
 .art-ico svg { width: 14px; height: 14px; }
@@ -455,7 +455,7 @@ body:not(.js) .reveal { opacity: 1; transform: none; }
 }
 @media (max-width: 640px) {
   .section { padding-block: 62px; }
-  /* the hero copy stacks much taller on narrow screens — drop the contour
+  /* the hero copy stacks much taller on narrow screens â€” drop the contour
      lines further down so they never run through the fine-print line */
   .hero__topo svg { top: 74%; }
   .infra-row2 { grid-template-columns: 1fr; gap: 8px; }
@@ -466,4 +466,21 @@ body:not(.js) .reveal { opacity: 1; transform: none; }
   .road-item { flex-direction: column; align-items: flex-start; gap: 8px; }
   .member-card { width: 100%; }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
+}
+
+
+/* ---- Score editorial section (replaces cap-cards) ---- */
+.score-editorial { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: start; }
+.score-editorial__head h2 { margin-bottom: 16px; }
+.score-editorial__head .lead { margin-bottom: 0; }
+.score-steps { display: flex; flex-direction: column; }
+.score-step { display: grid; grid-template-columns: 52px 1fr; gap: 24px; padding-block: 32px; border-bottom: 1px solid var(--line-soft); align-items: start; }
+.score-step:first-child { padding-top: 0; }
+.score-step:last-child { border-bottom: none; }
+.score-step__n { font-family: var(--font-head); font-size: 2.2rem; font-weight: 700; color: var(--mint-500); line-height: 1; opacity: .3; padding-top: 2px; }
+.score-step__body h3 { font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: #fff; }
+.score-step__body p { font-size: .9rem; line-height: 1.68; }
+
+@media (max-width: 768px) {
+  .score-editorial { grid-template-columns: 1fr; gap: 40px; }
 }
