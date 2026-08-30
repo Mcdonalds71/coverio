@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Architecture & Compliance — Coverio</title>
+  <meta name="description" content="Coverio enterprise security architecture, SOC2 Type II compliance, AWS KMS encryption, and zero customer-data AI retraining policy." />
+  <meta name="theme-color" content="#080E13" />
+  <link rel="canonical" href="https://coverio.ai/security.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header scrolled">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Coverio Home">
+        <svg class="brand-mark" viewBox="0 0 44 44" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="44" rx="12" fill="#0A1117" stroke="#1C2833" stroke-width="1.5"/>
+          <path d="M22 8L34 14.5V28L22 35L10 28V14.5L22 8Z" fill="url(#coverioGradSec)" stroke="#10B981" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M22 13L30 17.5V25.5L22 30L14 25.5V17.5L22 13Z" stroke="#34D399" stroke-width="1.2" stroke-dasharray="2.5 2.5" stroke-opacity="0.8"/>
+          <path d="M17.5 18C15.8 19.8 15.8 23.2 17.5 25C19.2 26.8 22.8 26.8 24.5 25" stroke="#F5F1E9" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="25.5" cy="18" r="2.2" fill="#D97706"/>
+          <defs>
+            <linearGradient id="coverioGradSec" x1="22" y1="8" x2="22" y2="35" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#10B981" stop-opacity="0.32"/>
+              <stop offset="1" stop-color="#0A1117" stop-opacity="0.08"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-text">Coverio<span>.</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html#solutions">Solutions</a>
+        <a href="index.html#workflow">How It Works</a>
+        <a href="index.html#technology">Tech Stack</a>
+        <a href="index.html#traction">Traction</a>
+        <a href="index.html#team">Team</a>
+        <a href="security.html" style="color: var(--emerald-deep); font-weight: 650;">Security</a>
+        <a href="login.html" style="opacity: 0.85;">Login</a>
+      </nav>
+
+      <a href="signup.html" class="btn btn--primary">
+        Get started
+        <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" data-open="false">
+    <a href="index.html#solutions">Solutions</a>
+    <a href="index.html#workflow">How It Works</a>
+    <a href="index.html#technology">Tech Stack</a>
+    <a href="index.html#traction">Traction</a>
+    <a href="index.html#team">Team</a>
+    <a href="security.html">Security Architecture</a>
+    <a href="login.html">Underwriter Login</a>
+    <a href="signup.html" class="btn btn--primary" style="margin-top: 2rem;">
+      Get started
+      <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </a>
+  </div>
+
+  <main class="section" style="padding-top: 130px;">
+    <div class="container" style="max-width: 860px;">
+      <span class="chip">Enterprise Governance</span>
+      <h1 style="margin-top: 0.85rem; margin-bottom: 1.25rem;">Security, Trust & <em>Data Architecture.</em></h1>
+      <p class="lead" style="margin-bottom: 3.5rem;">Commercial insurance submissions contain confidential policyholder financials, employee census schedules, and sensitive loss runs. Coverio is architected from day one with institutional security controls.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div class="step-card" style="padding: 2rem;">
+          <div class="step-num">01</div>
+          <h3>Zero Model Retraining Policy</h3>
+          <p>Coverio never uses your insured submissions, loss history files, or underwriting guidelines to train public or foundation AI models. Inference runs in dedicated, tenant-isolated private runtime containers with ephemeral memory caching.</p>
+        </div>
+
+        <div class="step-card" style="padding: 2rem;">
+          <div class="step-num">02</div>
+          <h3>Cryptographic KMS Isolation</h3>
+          <p>All ingested documents are encrypted in transit using TLS 1.3 and at rest in Amazon S3 using AES-256-GCM encryption with client-specific AWS Key Management Service (AWS KMS) customer-managed keys (CMK).</p>
+        </div>
+
+        <div class="step-card" style="padding: 2rem;">
+          <div class="step-num">03</div>
+          <h3>SOC2 Type II & NAIC Governance Compliance</h3>
+          <p>Coverio undergoes annual third-party SOC2 Type II audits covering Security, Availability, and Confidentiality. Our architecture strictly adheres to insurance model governance and auditability requirements.</p>
+        </div>
+
+        <div class="step-card" style="padding: 2rem;">
+          <div class="step-num">04</div>
+          <h3>Immutable Actuarial Audit Logs</h3>
+          <p>Every risk extraction token, loss ratio probability calculation, and underwriter referral trigger is cryptographically hashed and logged to immutable WORM (Write Once, Read Many) cloud audit archives.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 3.5rem; text-align: center;">
+        <a href="signup.html" class="btn btn--primary">
+          Request Security Whitepaper
+          <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand" style="margin-bottom: 1.25rem;">
+            <span class="brand-text" style="color: var(--cream); font-size: 1.8rem;">Coverio<span>.</span></span>
+          </a>
+          <p style="font-size: 0.92rem; color: var(--obsidian-muted); line-height: 1.6; max-width: 320px;">
+            Autonomous AI commercial underwriting, document extraction, and Bayesian loss-ratio risk intelligence for MGAs and P&C carriers.
+          </p>
+
+          <div class="footer-contact-block">
+            <p><strong>Coverio Technologies Ltd.</strong></p>
+            <p>Level 7, Mulliner Towers, 39 Alfred Rewane Road, Ikoyi, Lagos, Nigeria</p>
+            <a href="tel:+23418884920" class="footer-phone">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +234 (01) 888 4920
+            </a>
+          </div>
+
+          <div class="footer-social-row">
+            <a href="https://linkedin.com/company/coverio-ai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://facebook.com/coverio.ai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://x.com/CoverioAI" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="mailto:underwriting@coverio.ai" class="footer-social-link" aria-label="Email Coverio">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul>
+            <li><a href="index.html#problem">The Problem</a></li>
+            <li><a href="index.html#solutions">Underwriting Lines</a></li>
+            <li><a href="index.html#workflow">How It Works</a></li>
+            <li><a href="index.html#technology">Tech Stack</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Trust & Governance</h5>
+          <ul>
+            <li><a href="security.html">Security Architecture</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="login.html">Underwriter Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html#team">Leadership</a></li>
+            <li><a href="signup.html">Get started</a></li>
+            <li><a href="mailto:underwriting@coverio.ai">Contact Actuarial Team</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Coverio Technologies Ltd. Registered in Lagos & Delaware. Built for Commercial Underwriting Teams.</div>
+        <div style="font-family: var(--font-mono); font-size: 0.78rem;">Hosted on Cloud Infrastructure · Accelerated with GPUs</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

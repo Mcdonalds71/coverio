@@ -1,62 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Create your account — Coverio</title>
-<meta name="description" content="Create your Coverio workspace and start scoring submissions with AI." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/styles.css?v=11" />
-<link rel="icon" type="image/png" href="assets/logo-mark.png?v=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Enterprise Pilot — Coverio</title>
+  <meta name="description" content="Request pilot access to Coverio's AI Commercial Underwriting & Loss Due Diligence Engine." />
+  <meta name="theme-color" content="#070B0E" />
+  <link rel="canonical" href="https://coverio.ai/signup.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body>
-<div class="auth">
-  <aside class="auth__aside">
-    <a href="index.html" class="brand" style="color:#fff">
-      <span class="brand__mark"><img src="assets/logo-mark.png?v=1" alt="Coverio logo"></span>
-      Coverio
-    </a>
-    <div>
-      <span class="pill" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.16);color:rgba(255,255,255,.85)"><i></i> Live now</span>
-      <p class="auth__quote" style="margin-top:20px">Set up your workspace in minutes and score your first submission today.</p>
-      <ul class="auth__points">
-        <li><span class="ic"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Free plan available</li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> No credit card required</li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Data-protection ready by design</li>
-      </ul>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+  <header class="site-nav">
+    <div class="wrap nav-inner">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 44 44" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="44" height="44" rx="12" fill="#0A1117" stroke="#1C2833" stroke-width="1.5"/>
+          <path d="M22 8L34 14.5V28L22 35L10 28V14.5L22 8Z" fill="url(#coverioGradSign)" stroke="#10B981" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M22 13L30 17.5V25.5L22 30L14 25.5V17.5L22 13Z" stroke="#34D399" stroke-width="1.2" stroke-dasharray="2.5 2.5" stroke-opacity="0.8"/>
+          <path d="M17.5 18C15.8 19.8 15.8 23.2 17.5 25C19.2 26.8 22.8 26.8 24.5 25" stroke="#F5F1E9" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="25.5" cy="18" r="2.2" fill="#D97706"/>
+          <defs>
+            <linearGradient id="coverioGradSign" x1="22" y1="8" x2="22" y2="35" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#10B981" stop-opacity="0.32"/>
+              <stop offset="1" stop-color="#0A1117" stop-opacity="0.08"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-text">Coverio<span>.</span></span>
+      </a>
+      <a href="index.html" class="btn btn-ghost btn-sm">← Back to Home</a>
     </div>
-    <p style="font-size:.8rem;color:rgba(255,255,255,.45)">© 2026 Coverio Labs Ltd</p>
-  </aside>
-  <main class="auth__main">
-    <div class="auth__card">
-      <a href="index.html" class="auth__back"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Back to site</a>
-      <h1>Create your account</h1>
-      <p class="sub">Start your Coverio workspace today.</p>
-      <div class="oauth">
-        <button type="button">
-          <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9a5 5 0 01-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1.1-3.8 1.1-2.9 0-5.3-2-6.2-4.6H2.2v2.8A11 11 0 0012 23z"/><path fill="#FBBC05" d="M5.8 14.1a6.6 6.6 0 010-4.2V7.1H2.2a11 11 0 000 9.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 002.2 7.1l3.6 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>
-          Sign up with Google
-        </button>
-      </div>
-      <div class="divider">or with email</div>
-      <form id="signupForm" novalidate>
-        <div class="field"><label for="fullname">Full name</label><input id="fullname" type="text" placeholder="Jane Doe" required /></div>
-        <div class="field"><label for="org">Company or organization</label><input id="org" type="text" placeholder="Your company or organization" required /></div>
-        <div class="field"><label for="email">Work email</label><input id="email" type="email" placeholder="you@company.com" required /></div>
-        <div class="field">
-          <label for="password">Password</label>
-          <input id="password" type="password" placeholder="At least 8 characters" required />
-          <div class="strength"><i id="strengthBar"></i></div>
+  </header>
+
+  <main style="display: grid; place-items: center; padding: 3rem var(--gutter);">
+    <div class="modal-card" style="box-shadow: var(--shadow-card); max-width: 600px;">
+      <span class="eyebrow" style="margin-bottom: 8px;">Enterprise Onboarding</span>
+      <h1 style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 8px;">Request Pilot Credentials</h1>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 2rem;">Deploy Coverio on your commercial property, casualty, and cyber submission flow. Our actuarial engineers configure custom loss ratios and binding guidelines for your team.</p>
+
+      <form id="signupForm" action="#" method="POST" onsubmit="event.preventDefault(); document.getElementById('signupForm').style.display='none'; document.getElementById('signupSuccess').style.display='block';">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label" for="firstName">First Name</label>
+            <input type="text" id="firstName" class="form-input" placeholder="Adanna" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lastName">Last Name</label>
+            <input type="text" id="lastName" class="form-input" placeholder="Uzo" required />
+          </div>
         </div>
-        <label class="checkbox" style="margin-top:14px"><input type="checkbox" required /> I agree to the <a href="terms.html" style="color:var(--mint-400);font-weight:700">Terms</a> &amp; <a href="privacy.html" style="color:var(--mint-400);font-weight:700">Privacy Policy</a>.</label>
-        <button type="submit" data-label="Create account" class="btn btn--mint btn--block btn--lg" style="margin-top:18px">Create account</button>
+
+        <div class="form-group">
+          <label class="form-label" for="workEmail">Work Email (Underwriting/Actuarial)</label>
+          <input type="email" id="workEmail" class="form-input" placeholder="name@carrier.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="orgName">Carrier, MGA, or Brokerage Name</label>
+          <input type="text" id="orgName" class="form-input" placeholder="e.g. Apex Commercial Specialty" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="linesOfBusiness">Primary Lines of Business</label>
+          <select id="linesOfBusiness" class="form-input">
+            <option value="property">Commercial Property & Inland Marine</option>
+            <option value="casualty">Commercial General Liability & Fleet</option>
+            <option value="cyber">Cyber Liability & Tech E&O</option>
+            <option value="multi">Multi-Line Specialty / Package</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+          Submit Pilot Application
+        </button>
+
+        <p style="font-size: 0.74rem; font-family: var(--font-mono); color: var(--text-tertiary); text-align: center; margin-top: 12px;">
+          Non-disclosure guaranteed · Encrypted on AWS KMS · SOC2 Type II aligned
+        </p>
       </form>
-      <p class="auth__foot">Already have an account? <a href="login.html">Log in</a></p>
+
+      <div id="signupSuccess" style="display: none; text-align: center; padding-block: 2.5rem;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 1px solid var(--emerald-500); display: grid; place-items: center; margin-inline: auto; color: var(--emerald-400); margin-bottom: 1.25rem;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 10px;">Pilot Application Received</h2>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); max-width: 440px; margin-inline: auto; margin-bottom: 2rem;">
+          Thank you for your interest in Coverio. Our actuarial systems team has received your details and will provision your dedicated sandbox instance within 24 hours.
+        </p>
+        <a href="index.html" class="btn btn-ghost btn-sm">Return to Homepage</a>
+      </div>
     </div>
   </main>
-</div>
-<script src="assets/app.js?v=2"></script>
+
+  <footer style="text-align: center; padding: 1.5rem; font-size: 0.78rem; color: var(--text-tertiary);">
+    © 2026 Coverio Technologies Inc. Registered in Delaware. All rights reserved.
+  </footer>
 </body>
 </html>
