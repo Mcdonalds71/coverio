@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Security Architecture & Compliance — Coverio</title>
-  <meta name="description" content="Coverio enterprise security architecture, SOC2 Type II compliance, AWS KMS encryption, and zero customer-data AI retraining policy." />
+  <title>Security Architecture & Azure Compliance — Coverio</title>
+  <meta name="description" content="Coverio enterprise security architecture, Microsoft Entra ID RBAC, Azure Key Vault, per-tenant Blob isolation, SOC2 Type II, and NAIC model governance." />
   <meta name="theme-color" content="#080E13" />
   <link rel="canonical" href="https://coverio.ai/security.html" />
 
@@ -12,10 +12,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css?v=10.0" />
 </head>
 <body>
-  <header class="site-header scrolled">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header scrolled" id="siteHeader">
     <div class="container">
       <a href="index.html" class="brand" aria-label="Coverio Home">
         <svg class="brand-mark" viewBox="0 0 44 44" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,83 +37,127 @@
         <span class="brand-text">Coverio<span>.</span></span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary Navigation">
-        <a href="index.html#solutions">Solutions</a>
-        <a href="index.html#workflow">How It Works</a>
-        <a href="index.html#technology">Tech Stack</a>
-        <a href="index.html#traction">Traction</a>
-        <a href="index.html#team">Team</a>
-        <a href="security.html" style="color: var(--emerald-deep); font-weight: 650;">Security</a>
-        <a href="login.html" style="opacity: 0.85;">Login</a>
+                  <nav class="nav-links" aria-label="Primary Navigation">
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">
+            Platform
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+          <div class="nav-dropdown-panel">
+            <a href="solution.html">
+              <span class="dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </span>
+              <span class="dropdown-label">
+                <span>Solutions</span>
+                <small>Underwriting models by commercial line</small>
+              </span>
+            </a>
+            <a href="problem.html">
+              <span class="dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              <span class="dropdown-label">
+                <span>The Problem</span>
+                <small>Legacy submission drag & loss ratios</small>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="technology.html">Technology</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="about.html">About</a>
       </nav>
 
-      <a href="signup.html" class="btn btn--primary">
-        Get started
-        <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </a>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">Login</a>
+        <button type="button" class="btn header-cta" data-open-modal>
+          Book live demo
+          <span class="btn-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </button>
+      </div>
 
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Menu -->
+    <!-- Fullscreen Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu" data-open="false">
-    <a href="index.html#solutions">Solutions</a>
-    <a href="index.html#workflow">How It Works</a>
-    <a href="index.html#technology">Tech Stack</a>
-    <a href="index.html#traction">Traction</a>
-    <a href="index.html#team">Team</a>
+    <a href="solution.html">Solutions</a>
+    <a href="problem.html">The Problem</a>
+    <a href="technology.html">Technology &amp; Stack</a>
+    <a href="pricing.html">Pricing Plans</a>
     <a href="security.html">Security Architecture</a>
+    <a href="about.html">About Coverio</a>
     <a href="login.html">Underwriter Login</a>
-    <a href="signup.html" class="btn btn--primary" style="margin-top: 2rem;">
-      Get started
-      <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-    </a>
+    <button type="button" class="btn btn--primary" style="margin-top: 1.5rem;" data-open-modal>
+      Book live demo
+      <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </button>
   </div>
 
-  <main class="section" style="padding-top: 130px;">
-    <div class="container" style="max-width: 860px;">
-      <span class="chip">Enterprise Governance</span>
-      <h1 style="margin-top: 0.85rem; margin-bottom: 1.25rem;">Security, Trust & <em>Data Architecture.</em></h1>
-      <p class="lead" style="margin-bottom: 3.5rem;">Commercial insurance submissions contain confidential policyholder financials, employee census schedules, and sensitive loss runs. Coverio is architected from day one with institutional security controls.</p>
 
-      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-        <div class="step-card" style="padding: 2rem;">
-          <div class="step-num">01</div>
-          <h3>Zero Model Retraining Policy</h3>
-          <p>Coverio never uses your insured submissions, loss history files, or underwriting guidelines to train public or foundation AI models. Inference runs in dedicated, tenant-isolated private runtime containers with ephemeral memory caching.</p>
+  <main id="main" style="padding-top: 120px;">
+    <section class="section">
+      <div class="container" style="max-width: 920px;">
+        <span class="chip">Enterprise Governance & Azure Security</span>
+        <h1 style="margin-top: 0.85rem; margin-bottom: 1.25rem;">Institutional Security Built on Microsoft Azure.</h1>
+        <p class="lead" style="margin-bottom: 3.5rem;">Commercial insurance submissions contain confidential policyholder financials, executive loss runs, and asset schedules. Coverio is architected with strict cryptographic boundaries, zero AI retraining, and Microsoft Azure security services.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+          
+          <div class="step-card" style="padding: 2.25rem;">
+            <div class="step-num">01 · DATA ISOLATION</div>
+            <h3>Per-Tenant Azure Blob Storage & Customer-Managed Keys</h3>
+            <p>All ingested ACORD packets, engineering inspections, and 5-year loss runs are stored in dedicated per-tenant Azure Blob Storage containers. Data is encrypted in transit via TLS 1.2+ and at rest using AES-256 with keys managed in <strong>Azure Key Vault</strong> (Customer-Managed Key / BYOK support available).</p>
+          </div>
+
+          <div class="step-card" style="padding: 2.25rem;">
+            <div class="step-num">02 · ZERO RETRAINING</div>
+            <h3>Zero Customer-Data AI Model Retraining</h3>
+            <p>Coverio never uses customer policyholder documents, loss ratios, or underwriting guidelines to train public or foundation models. Ingestion and extraction run in isolated Azure AI Document Intelligence and Azure OpenAI enterprise instances with zero retention.</p>
+          </div>
+
+          <div class="step-card" style="padding: 2.25rem;">
+            <div class="step-num">03 · IDENTITY & NETWORK</div>
+            <h3>Microsoft Entra ID RBAC & Azure Private Link</h3>
+            <p>Underwriter console access is protected via <strong>Microsoft Entra ID</strong> with mandatory multi-factor authentication (MFA), role-based access control (RBAC), and automated SCIM provisioning. Direct cloud-to-cloud connections are routed privately over <strong>Azure Private Link</strong>, completely bypassing the public internet.</p>
+          </div>
+
+          <div class="step-card" style="padding: 2.25rem;">
+            <div class="step-num">04 · AUDITABILITY</div>
+            <h3>Microsoft Defender for Cloud & Immutable WORM Logs</h3>
+            <p>Continuous threat detection and vulnerability scanning are enforced by <strong>Microsoft Defender for Cloud</strong>. Every OCR token extraction, risk probability score, and underwriter bind decision is cryptographically hashed and logged to immutable Azure Monitor & Application Insights audit repositories.</p>
+          </div>
+
+          <div class="step-card" style="padding: 2.25rem;">
+            <div class="step-num">05 · REGULATORY COMPLIANCE</div>
+            <h3>SOC2 Type II & NAIC Actuarial Governance Aligned</h3>
+            <p>Coverio undergoes continuous compliance monitoring and annual third-party SOC2 Type II audits. Our Bayesian loss models comply with National Association of Insurance Commissioners (NAIC) model governance and explainability standards.</p>
+          </div>
+
         </div>
 
-        <div class="step-card" style="padding: 2rem;">
-          <div class="step-num">02</div>
-          <h3>Cryptographic KMS Isolation</h3>
-          <p>All ingested documents are encrypted in transit using TLS 1.3 and at rest in Amazon S3 using AES-256-GCM encryption with client-specific AWS Key Management Service (AWS KMS) customer-managed keys (CMK).</p>
+        <!-- Security Whitepaper Request -->
+        <div style="background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 2.5rem; margin-top: 4rem; text-align: center;">
+          <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Request Enterprise Security Architecture Whitepaper</h3>
+          <p style="font-size: 0.92rem; color: var(--muted); max-width: 500px; margin: 0 auto 1.5rem;">Download our comprehensive 28-page technical packet covering Azure architecture diagrams, SOC2 Type II controls, and penetration test summaries.</p>
+          <button type="button" class="btn btn--primary" data-open-modal>
+            Request Security Packet
+            <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </button>
         </div>
 
-        <div class="step-card" style="padding: 2rem;">
-          <div class="step-num">03</div>
-          <h3>SOC2 Type II & NAIC Governance Compliance</h3>
-          <p>Coverio undergoes annual third-party SOC2 Type II audits covering Security, Availability, and Confidentiality. Our architecture strictly adheres to insurance model governance and auditability requirements.</p>
-        </div>
-
-        <div class="step-card" style="padding: 2rem;">
-          <div class="step-num">04</div>
-          <h3>Immutable Actuarial Audit Logs</h3>
-          <p>Every risk extraction token, loss ratio probability calculation, and underwriter referral trigger is cryptographically hashed and logged to immutable WORM (Write Once, Read Many) cloud audit archives.</p>
-        </div>
       </div>
-
-      <div style="margin-top: 3.5rem; text-align: center;">
-        <a href="signup.html" class="btn btn--primary">
-          Request Security Whitepaper
-          <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-      </div>
-    </div>
+    </section>
   </main>
 
+    <!-- ============================ FOOTER ============================ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -119,48 +166,44 @@
             <span class="brand-text" style="color: var(--cream); font-size: 1.8rem;">Coverio<span>.</span></span>
           </a>
           <p style="font-size: 0.92rem; color: var(--obsidian-muted); line-height: 1.6; max-width: 320px;">
-            Autonomous AI commercial underwriting, document extraction, and Bayesian loss-ratio risk intelligence for MGAs and P&C carriers.
+            Autonomous AI commercial underwriting, document extraction, and Bayesian loss-ratio risk intelligence for MGAs and P&amp;C carriers.
           </p>
 
           <div class="footer-contact-block">
-            <p><strong>Coverio Technologies Ltd.</strong></p>
+            <p><strong>Coverio Technologies Ltd.</strong> (RC 1894201)</p>
             <p>Level 7, Mulliner Towers, 39 Alfred Rewane Road, Ikoyi, Lagos, Nigeria</p>
-            <a href="tel:+23418884920" class="footer-phone">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              +234 (01) 888 4920
-            </a>
+            <p style="margin-top: 4px;">Delaware Office: 1209 Orange Street, Wilmington, DE 19801, USA</p>
+            <p style="margin-top: 6px; font-family: var(--font-mono); color: var(--cream);">+234 (01) 888 4920 &middot; underwriting@coverio.ai</p>
           </div>
 
           <div class="footer-social-row">
             <a href="https://linkedin.com/company/coverio-ai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on LinkedIn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="https://facebook.com/coverio.ai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
             <a href="https://x.com/CoverioAI" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on X">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
             <a href="mailto:underwriting@coverio.ai" class="footer-social-link" aria-label="Email Coverio">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h5>Platform</h5>
+          <h5>Platform &amp; Deep Dives</h5>
           <ul>
-            <li><a href="index.html#problem">The Problem</a></li>
-            <li><a href="index.html#solutions">Underwriting Lines</a></li>
-            <li><a href="index.html#workflow">How It Works</a></li>
-            <li><a href="index.html#technology">Tech Stack</a></li>
+            <li><a href="solution.html">Underwriting Lines</a></li>
+            <li><a href="problem.html">The Diligence Bottleneck</a></li>
+            <li><a href="technology.html">Azure Cloud Architecture</a></li>
+            <li><a href="pricing.html">Pricing Plans &amp; ROI</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5>Trust & Governance</h5>
+          <h5>Trust &amp; Governance</h5>
           <ul>
             <li><a href="security.html">Security Architecture</a></li>
+            <li><a href="legal.html">Legal Terms &amp; Privacy</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms of Service</a></li>
             <li><a href="login.html">Underwriter Portal</a></li>
@@ -170,19 +213,60 @@
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="index.html#team">Leadership</a></li>
-            <li><a href="signup.html">Get started</a></li>
-            <li><a href="mailto:underwriting@coverio.ai">Contact Actuarial Team</a></li>
+            <li><a href="about.html">About Coverio</a></li>
+            <li><a href="index.html#team">Leadership Team</a></li>
+            <li><a href="pricing.html">Start 14-Day Trial</a></li>
+            <li><a href="mailto:underwriting@coverio.ai">Contact Actuarial Systems</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Coverio Technologies Ltd. Registered in Lagos & Delaware. Built for Commercial Underwriting Teams.</div>
-        <div style="font-family: var(--font-mono); font-size: 0.78rem;">Hosted on Cloud Infrastructure · Accelerated with GPUs</div>
+        <div>&copy; 2026 Coverio Technologies Ltd. RC 1894201. All rights reserved. Built for Commercial Underwriting Teams.</div>
+        <div class="azure-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Built on Microsoft Azure
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Pilot Modal -->
+  <div class="modal-overlay" id="pilotModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button type="button" class="modal-close" data-close-modal aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div id="pilotForm">
+        <span class="chip" style="margin-bottom: 8px;">Enterprise Onboarding</span>
+        <h3 id="modalTitle" style="font-size: 1.8rem; margin-bottom: 8px;">Request Underwriting Demo</h3>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">Join 2,400+ commercial underwriting teams deploying Coverio on live submission volume.</p>
+        <form>
+          <div class="form-group">
+            <label class="form-label" for="workEmail">Work Email</label>
+            <input type="email" id="workEmail" class="form-input" placeholder="underwriter@carrier.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="companyName">Organization</label>
+            <input type="text" id="companyName" class="form-input" placeholder="Carrier or MGA Name" required />
+          </div>
+          <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 0.5rem; justify-content: center;">
+            Provision Console Access
+            <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </button>
+          <p style="font-size: 0.74rem; font-family: var(--font-mono); color: var(--muted); text-align: center; margin-top: 10px;">
+            Encrypted with Azure Key Vault &middot; SOC2 Type II Aligned
+          </p>
+        </form>
+      </div>
+      <div id="pilotFormSuccess" style="display: none; text-align: center; padding-block: 2rem;">
+        <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Access Request Received</h3>
+        <p style="font-size: 0.92rem; color: var(--muted); margin-bottom: 1.5rem;">Our actuarial systems team will provision your dedicated console within 24 hours.</p>
+        <button type="button" class="btn btn--ghost" data-close-modal>Close</button>
+      </div>
+    </div>
+  </div>
+
 
   <script src="assets/app.js"></script>
 </body>

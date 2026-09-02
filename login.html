@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Underwriter Login — Coverio</title>
+  <title>Underwriter Console Login — Coverio</title>
   <meta name="description" content="Log in to your Coverio carrier underwriting dashboard and submission triage console." />
-  <meta name="theme-color" content="#070B0E" />
+  <meta name="theme-color" content="#080E13" />
   <link rel="canonical" href="https://coverio.ai/login.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css?v=10.0" />
 </head>
-<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
-  <header class="site-nav">
-    <div class="wrap nav-inner">
-      <a href="index.html" class="brand">
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; background: var(--cream);">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Coverio Home">
         <svg class="brand-mark" viewBox="0 0 44 44" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="44" height="44" rx="12" fill="#0A1117" stroke="#1C2833" stroke-width="1.5"/>
-          <path d="M22 8L34 14.5V28L22 35L10 28V14.5L22 8Z" fill="url(#coverioGradLog)" stroke="#10B981" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M22 8L34 14.5V28L22 35L10 28V14.5L22 8Z" fill="url(#coverioGradSub)" stroke="#10B981" stroke-width="1.8" stroke-linejoin="round"/>
           <path d="M22 13L30 17.5V25.5L22 30L14 25.5V17.5L22 13Z" stroke="#34D399" stroke-width="1.2" stroke-dasharray="2.5 2.5" stroke-opacity="0.8"/>
           <path d="M17.5 18C15.8 19.8 15.8 23.2 17.5 25C19.2 26.8 22.8 26.8 24.5 25" stroke="#F5F1E9" stroke-width="2.4" stroke-linecap="round"/>
           <circle cx="25.5" cy="18" r="2.2" fill="#D97706"/>
           <defs>
-            <linearGradient id="coverioGradLog" x1="22" y1="8" x2="22" y2="35" gradientUnits="userSpaceOnUse">
+            <linearGradient id="coverioGradSub" x1="22" y1="8" x2="22" y2="35" gradientUnits="userSpaceOnUse">
               <stop stop-color="#10B981" stop-opacity="0.32"/>
               <stop offset="1" stop-color="#0A1117" stop-opacity="0.08"/>
             </linearGradient>
@@ -33,17 +35,78 @@
         </svg>
         <span class="brand-text">Coverio<span>.</span></span>
       </a>
-      <a href="index.html" class="btn btn-ghost btn-sm">← Back to Home</a>
+
+            <nav class="nav-links" aria-label="Primary Navigation">
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">
+            Platform
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+          <div class="nav-dropdown-panel">
+            <a href="solution.html">
+              <span class="dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </span>
+              <span class="dropdown-label">
+                <span>Solutions</span>
+                <small>Underwriting models by commercial line</small>
+              </span>
+            </a>
+            <a href="problem.html">
+              <span class="dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              <span class="dropdown-label">
+                <span>The Problem</span>
+                <small>Legacy submission drag & loss ratios</small>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="technology.html">Technology</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">Login</a>
+        <button type="button" class="btn header-cta" data-open-modal>
+          Book live demo
+          <span class="btn-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
     </div>
   </header>
 
-  <main style="display: grid; place-items: center; padding: 2rem var(--gutter);">
-    <div class="modal-card" style="box-shadow: var(--shadow-card);">
-      <span class="eyebrow" style="margin-bottom: 8px;">Carrier Portal</span>
-      <h1 style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 8px;">Underwriter Log In</h1>
-      <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 2rem;">Access your commercial submission queue, loss run analytics, and binding authority console.</p>
+    <!-- Fullscreen Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" data-open="false">
+    <a href="solution.html">Solutions</a>
+    <a href="problem.html">The Problem</a>
+    <a href="technology.html">Technology &amp; Stack</a>
+    <a href="pricing.html">Pricing Plans</a>
+    <a href="security.html">Security Architecture</a>
+    <a href="about.html">About Coverio</a>
+    <a href="login.html">Underwriter Login</a>
+    <button type="button" class="btn btn--primary" style="margin-top: 1.5rem;" data-open-modal>
+      Book live demo
+      <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </button>
+  </div>
 
-      <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Carrier SSO authentication endpoint reached. Please use your corporate Okta or Microsoft Entra credentials.');">
+<main style="display: grid; place-items: center; padding: 2rem 1.5rem;">
+    <div class="modal-box" style="max-width: 480px; width: 100%;">
+      <span class="chip" style="margin-bottom: 8px;">Carrier Portal</span>
+      <h1 style="font-size: 2.2rem; margin-bottom: 8px;">Underwriter Log In</h1>
+      <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.75rem;">Access your commercial submission queue, loss run analytics, and binding authority console.</p>
+
+      <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Carrier SSO authentication endpoint reached. Please use your corporate Microsoft Entra or Okta credentials.');">
         <div class="form-group">
           <label class="form-label" for="userEmail">Corporate Underwriting Email</label>
           <input type="email" id="userEmail" class="form-input" placeholder="underwriter@carrier.com" required />
@@ -54,27 +117,124 @@
           <input type="password" id="userPass" class="form-input" placeholder="••••••••••••" required />
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+        <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
           Log In to Console
+          <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
         </button>
 
-        <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
-          <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Enterprise Single Sign-On (SSO)</p>
+        <div style="text-align: center; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line);">
+          <p style="font-size: 0.82rem; color: var(--muted); margin-bottom: 0.75rem;">Enterprise Single Sign-On (SSO)</p>
           <div style="display: flex; gap: 10px;">
-            <button type="button" class="btn btn-ghost btn-sm" style="flex: 1;" onclick="alert('Redirecting to Okta SAML 2.0...');">Okta SSO</button>
-            <button type="button" class="btn btn-ghost btn-sm" style="flex: 1;" onclick="alert('Redirecting to Microsoft Entra ID...');">Entra ID (Azure)</button>
+            <button type="button" class="btn btn--ghost" style="flex: 1; justify-content: center; font-size: 0.82rem; padding: 0.5rem;" onclick="alert('Redirecting to Microsoft Entra ID...');">Microsoft Entra</button>
+            <button type="button" class="btn btn--ghost" style="flex: 1; justify-content: center; font-size: 0.82rem; padding: 0.5rem;" onclick="alert('Redirecting to Okta SAML 2.0...');">Okta SSO</button>
           </div>
         </div>
 
-        <p style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--text-tertiary); text-align: center; margin-top: 1.5rem;">
-          Don't have an active pilot license? <a href="signup.html" style="color: var(--emerald-400);">Request Pilot Access</a>
+        <p style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--muted); text-align: center; margin-top: 1.5rem;">
+          Need a carrier account? <a href="signup.html" style="color: var(--emerald-deep); font-weight: 600;">Request Pilot Access</a>
         </p>
       </form>
     </div>
   </main>
 
-  <footer style="text-align: center; padding: 1.5rem; font-size: 0.78rem; color: var(--text-tertiary);">
-    © 2026 Coverio Technologies Inc. All underwriting sessions are logged and encrypted.
+    <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand" style="margin-bottom: 1.25rem;">
+            <span class="brand-text" style="color: var(--cream); font-size: 1.8rem;">Coverio<span>.</span></span>
+          </a>
+          <p style="font-size: 0.92rem; color: var(--obsidian-muted); line-height: 1.6; max-width: 320px;">
+            Autonomous AI commercial underwriting, document extraction, and Bayesian loss-ratio risk intelligence for MGAs and P&amp;C carriers.
+          </p>
+
+          <div class="footer-contact-block">
+            <p><strong>Coverio Technologies Ltd.</strong> (RC 1894201)</p>
+            <p>Level 7, Mulliner Towers, 39 Alfred Rewane Road, Ikoyi, Lagos, Nigeria</p>
+            <p style="margin-top: 4px;">Delaware Office: 1209 Orange Street, Wilmington, DE 19801, USA</p>
+            <p style="margin-top: 6px; font-family: var(--font-mono); color: var(--cream);">+234 (01) 888 4920 &middot; underwriting@coverio.ai</p>
+          </div>
+
+          <div class="footer-social-row">
+            <a href="https://linkedin.com/company/coverio-ai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://x.com/CoverioAI" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="mailto:underwriting@coverio.ai" class="footer-social-link" aria-label="Email Coverio">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Platform &amp; Deep Dives</h5>
+          <ul>
+            <li><a href="solution.html">Underwriting Lines</a></li>
+            <li><a href="problem.html">The Diligence Bottleneck</a></li>
+            <li><a href="technology.html">Azure Cloud Architecture</a></li>
+            <li><a href="pricing.html">Pricing Plans &amp; ROI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Trust &amp; Governance</h5>
+          <ul>
+            <li><a href="security.html">Security Architecture</a></li>
+            <li><a href="legal.html">Legal Terms &amp; Privacy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="login.html">Underwriter Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="about.html">About Coverio</a></li>
+            <li><a href="index.html#team">Leadership Team</a></li>
+            <li><a href="pricing.html">Start 14-Day Trial</a></li>
+            <li><a href="mailto:underwriting@coverio.ai">Contact Actuarial Systems</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Coverio Technologies Ltd. RC 1894201. All rights reserved. Built for Commercial Underwriting Teams.</div>
+        <div class="azure-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Built on Microsoft Azure
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Pilot Modal -->
+  <div class="modal-overlay" id="pilotModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button type="button" class="modal-close" data-close-modal aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div id="pilotForm">
+        <span class="chip" style="margin-bottom: 8px;">Enterprise Onboarding</span>
+        <h3 id="modalTitle" style="font-size: 1.8rem; margin-bottom: 8px;">Request Underwriting Demo</h3>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">Join 2,400+ commercial underwriting teams deploying Coverio on live submission volume.</p>
+        <form>
+          <div class="form-group">
+            <label class="form-label" for="workEmail">Work Email</label>
+            <input type="email" id="workEmail" class="form-input" placeholder="underwriter@carrier.com" required />
+          </div>
+          <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 0.5rem; justify-content: center;">
+            Schedule Live Review
+            <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>

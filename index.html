@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coverio — AI Commercial Underwriting & Loss Due Diligence Engine</title>
-  <meta name="description" content="Coverio gives commercial insurers, MGAs, and brokerages automated submission triage — extracting risk signals from 80-page packets and modeling Bayesian loss ratios in under 45 seconds." />
+  <meta name="description" content="Coverio gives commercial P&C insurers, MGAs, and brokerages automated submission triage — extracting risk signals from 80-page packets and modeling Bayesian loss ratios in under 45 seconds." />
   <meta name="theme-color" content="#080E13" />
   <link rel="canonical" href="https://coverio.ai/" />
 
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Coverio" />
   <meta property="og:title" content="Coverio — AI Commercial Underwriting & Loss Due Diligence Engine" />
-  <meta property="og:description" content="Triage commercial property, casualty, and infrastructure submissions with multimodal AI. Enterprise Tech Stack built on AWS and accelerated with NVIDIA." />
+  <meta property="og:description" content="Price every commercial submission in minutes, not days. Enterprise InsurTech infrastructure built on Microsoft Azure." />
   <meta property="og:image" content="assets/img/hero-underwriting.jpg" />
 
   <!-- Fonts: Instrument Serif (Editorial Display), Inter Tight (SaaS UI), JetBrains Mono (Telemetry) -->
@@ -20,17 +20,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css?v=10.0" />
 
   <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Coverio Technologies Inc.",
+    "name": "Coverio Technologies Ltd.",
     "url": "https://coverio.ai/",
     "logo": "https://coverio.ai/assets/logo-mark.svg",
-    "description": "AI-powered commercial insurance underwriting, document extraction, and Bayesian loss-ratio modeling.",
+    "description": "AI-powered commercial insurance underwriting, document extraction, and Bayesian loss-ratio modeling on Microsoft Azure.",
     "email": "underwriting@coverio.ai"
   }
   </script>
@@ -59,83 +59,117 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary Navigation">
-        <a href="#solutions">Solutions</a>
-        <a href="#workflow">How It Works</a>
-        <a href="#technology">Tech Stack</a>
-        <a href="#traction">Traction</a>
-        <a href="#team">Team</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">
+            Platform
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </span>
+          <div class="nav-dropdown-panel">
+            <a href="solution.html">
+              <span class="dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </span>
+              <span class="dropdown-label">
+                <span>Solutions</span>
+                <small>Underwriting models by commercial line</small>
+              </span>
+            </a>
+            <a href="problem.html">
+              <span class="dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              <span class="dropdown-label">
+                <span>The Problem</span>
+                <small>Legacy submission drag & loss ratios</small>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="technology.html">Technology</a>
+        <a href="pricing.html">Pricing</a>
         <a href="security.html">Security</a>
-        <a href="login.html" style="opacity: 0.85;">Login</a>
+        <a href="about.html">About</a>
       </nav>
 
-      <button type="button" class="btn header-cta" data-open-modal>
-        Get started
-        <span class="btn-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </button>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">Login</a>
+        <button type="button" class="btn header-cta" data-open-modal>
+          Book live demo
+          <span class="btn-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </button>
+      </div>
 
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
     </div>
   </header>
 
-  <!-- Fullscreen Mobile Menu (Verdyn Style) -->
+  <!-- Fullscreen Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu" data-open="false">
-    <a href="#solutions">Solutions</a>
-    <a href="#workflow">How It Works</a>
-    <a href="#technology">Tech Stack</a>
-    <a href="#traction">Traction</a>
-    <a href="#team">Team</a>
+    <a href="solution.html">Solutions</a>
+    <a href="problem.html">The Problem</a>
+    <a href="technology.html">Technology &amp; Stack</a>
+    <a href="pricing.html">Pricing Plans</a>
     <a href="security.html">Security Architecture</a>
+    <a href="about.html">About Coverio</a>
     <a href="login.html">Underwriter Login</a>
-    <button type="button" class="btn btn--primary" style="margin-top: 2rem;" data-open-modal>
-      Get started
-      <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    <button type="button" class="btn btn--primary" style="margin-top: 1.5rem;" data-open-modal>
+      Book live demo
+      <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
     </button>
   </div>
 
   <main id="main">
 
-    <!-- ============================ 1. HERO (Cinematic Full Bleed) ============================ -->
-    <section class="hero">
-      <div class="hero__media">
-        <img src="assets/img/hero-underwriting.jpg" width="1920" height="1080" alt="Nigerian commercial property underwriters analyzing risk data on wide screen in Lagos office" />
+        <!-- ============================ 1. HERO (Centralized + Cinematic Backdrop + Centerpiece Dossier) ============================ -->
+    <section class="hero" id="home">
+      <!-- Cinematic Underwriting Operations Backdrop -->
+      <div class="hero__backdrop">
+        <img src="assets/img/hero-underwriting.jpg" alt="Commercial Underwriting Operations Headquarters" class="hero__backdrop-img" />
+        <div class="hero__backdrop-overlay"></div>
       </div>
 
       <div class="hero__inner">
         <div class="container">
-          <span class="chip chip--on-dark">AI Commercial Underwriting</span>
-          <h1>Price the true risk. Not the submission queue.</h1>
-          <p class="lead">Coverio ingests 80-page commercial submissions, loss runs, and engineering inspections with multimodal AI — returning Bayesian loss-ratio models and bound-ready underwriting verdicts in under 45 seconds.</p>
+          
+          <h1>Price every commercial submission<br class="desktop-only" /> in minutes, not days.</h1>
+          <p class="lead">Coverio ingests 80-page commercial submissions, loss runs, and engineering inspections with Azure AI Document Intelligence — returning Bayesian loss-ratio models and bound-ready underwriting verdicts in under 45 seconds.</p>
 
           <div class="hero__cta">
             <button type="button" class="btn btn--on-dark" data-open-modal>
-              Get started
+              Book live demo
               <span class="btn-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </span>
             </button>
-            <a href="#workflow" class="btn btn--ghost-dark">
-              See how it works
+            <a href="technology.html" class="btn btn--ghost-dark">
+              View live architecture
               <span class="btn-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </span>
             </a>
           </div>
 
           <div class="hero__trust-strip">
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Built on AWS Cloud</span>
+            <span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              Built on Microsoft Azure
+            </span>
             <span class="dot"></span>
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg> Accelerated with NVIDIA GPUs</span>
+            <span>10k+ GPU Monte Carlo Simulations</span>
             <span class="dot"></span>
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Live in Production</span>
+            <span>SOC 2 Type II &amp; ISO 27001 Aligned</span>
+            <span class="dot"></span>
+            <span>99.99% Uptime SLA</span>
           </div>
+
         </div>
       </div>
 
-      <!-- Inset Floating Underwriting Widget -->
+      <!-- Floating Underwriting Live Widget -->
       <div class="hero__floating-widget">
         <div class="widget-tag">
           <span>LIVE SUBMISSION TRIAGE</span>
@@ -153,233 +187,415 @@
       </div>
     </section>
 
-    <!-- ============================ 2. PROBLEM SECTION ============================ -->
-    <section class="section" id="problem">
-      <div class="container">
-        <div class="split">
-          <div class="section-head">
-            <span class="chip">The Underwriting Bottleneck</span>
-            <h2>Manual review is slow, and leaves millions in unpriced catastrophe risk on the table.</h2>
-            <p class="lead">Commercial insurance submissions are overwhelming carrier capacity across emerging markets. 80-page unstructured packets with dense loss runs, building inspection surveys, and ACORD schedules sit in queues for 4 to 6 days.</p>
-            <p style="margin-top: 1rem; color: var(--muted);">Brokers bind policies with whichever carrier quotes first. Underwriters face a dangerous trade-off: skim the documents to quote fast and absorb multi-million dollar catastrophic loss ratios, or perform slow manual diligence and lose the market's best corporate business.</p>
-            <div style="margin-top: 1.75rem;">
-              <a href="#solutions" class="btn btn--ghost">
-                Our Solutions
-                <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-              </a>
-            </div>
-          </div>
-
-          <div class="photo-frame">
-            <img src="assets/img/property-inspection.jpg" alt="Nigerian structural engineering inspection team surveying high-rise commercial tower in Lagos" width="1200" height="900" loading="lazy" />
-            <div class="photo-caption">
-              <div>
-                <strong>Eko Atlantic Structural Survey</strong>
-                <p style="font-family: var(--font-mono); font-size: 0.76rem; color: rgba(255,255,255,0.7);">42-Page Asset Exposure File · Victoria Island</p>
-              </div>
-              <span class="chip chip--on-dark">12 Risk Flags Parsed</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="stat-pills-row">
-          <div class="stat-pill-card signal">
-            <div class="stat-num">64%</div>
-            <h4>Submissions Lost to Slow Turnaround</h4>
-            <p>Commercial brokers place business with the fastest quoting carriers. Every day a submission waits decreases binding conversion by 18%.</p>
-          </div>
-
-          <div class="stat-pill-card alert">
-            <div class="stat-num">₦4.2B+</div>
-            <h4>Preventable Catastrophic Loss Exposure</h4>
-            <p>Carriers incur millions in avoidable claims because unread inspection notes hid recurring water leaks and un-remediated fire codes.</p>
-          </div>
-
-          <div class="stat-pill-card">
-            <div class="stat-num">82 hrs</div>
-            <h4>Saved per Underwriter Monthly</h4>
-            <p>Senior actuaries and underwriters eliminate manual data entry, focusing entirely on high-conviction risk selection and pricing.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ 3. SOLUTIONS / MEDIA CARDS ============================ -->
-    <section class="section" id="solutions" style="padding-top: 0;">
+    <!-- ============================ 2. BUILT FOR ============================ -->
+    <section class="section" id="built-for">
       <div class="container">
         <div class="section-head">
-          <span class="chip">Underwriting Lines</span>
-          <h2>Multimodal AI across high-stakes commercial lines of business.</h2>
-          <p class="lead">Engineered specifically for the complex document types, loss patterns, and binding criteria of commercial specialty carriers.</p>
+          <span class="chip">Target Workloads</span>
+          <h2>Built for teams who price commercial risk for a living.</h2>
+          <p class="lead">Coverio eliminates manual document reading and replaces subjective guesswork with deterministic actuarial modeling across three core enterprise personas.</p>
         </div>
 
-        <div class="grid services-grid" style="margin-top: 2.5rem;">
-          <div class="media-card">
-            <img src="assets/img/property-inspection.jpg" alt="Commercial property high-rise structure inspection in Lagos" loading="lazy" />
-            <div class="media-card__body">
-              <span class="chip chip--on-dark">Commercial Property</span>
-              <h3>High-Rise & Coastal Infrastructure</h3>
-              <p>Extract roof age, NFPA sprinkler compliance, flood elevation certificates, and 5-year claims frequency directly from engineering PDFs.</p>
-              <span class="learn-more">Explore Property Model <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <div class="built-for-grid">
+          <div class="persona-card">
+            <div class="persona-tag">Persona 01</div>
+            <h3>Commercial P&C Underwriters</h3>
+            <p>Eliminate 3 hours spent skimming 80-page ACORD packets and handwritten loss runs. Get instant clause extraction, roof compliance checks, and bound-ready decision memos in seconds.</p>
+          </div>
+
+          <div class="persona-card">
+            <div class="persona-tag">Persona 02</div>
+            <h3>MGA Program Managers</h3>
+            <p>Scale submission capacity 5x without adding headcount. Automatically enforce strict binding authorities, syndicate loss appetite guidelines, and treaty compliance rules on every quote.</p>
+          </div>
+
+          <div class="persona-card">
+            <div class="persona-tag">Persona 03</div>
+            <h3>Specialty Corporate Brokers</h3>
+            <p>Deliver bindable commercial terms to clients first. Eliminate carrier quoting lag by submitting pre-validated, standardized risk dossiers directly into carrier triage queues.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. THREE PILLARS (With UI Mini Mocks) ============================ -->
+    <section class="section" id="pillars" style="background: var(--paper); border-block: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="chip">Core Capabilities</span>
+          <h2>Three pillars of autonomous commercial diligence.</h2>
+          <p class="lead">Engineered to handle unstructured documents, granular claims histories, and catastrophic risk simulations.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-num">PILLAR 01</div>
+            <h3>It triages multi-line submissions</h3>
+            <p>Automatically separates ACORD applications, schedules of values (SOVs), engineering inspection reports, and flood surveys upon arrival.</p>
+            
+            <div class="pillar-mock">
+              <div class="mock-row">
+                <span style="color: var(--muted);">Submission #CV-8924</span>
+                <span class="mock-badge mock-badge--green">TRIAGED</span>
+              </div>
+              <div class="mock-row">
+                <span>ACORD 125/140 Commercial</span>
+                <span>48 Pages Parsed</span>
+              </div>
+              <div class="mock-row">
+                <span>Sprinkler NFPA 13 Compliance</span>
+                <span style="color: var(--emerald-deep); font-weight: 600;">Verified (100%)</span>
+              </div>
             </div>
           </div>
 
-          <div class="media-card">
-            <img src="assets/img/hero-underwriting.jpg" alt="Fleet logistics and corporate casualty analytics" loading="lazy" />
-            <div class="media-card__body">
-              <span class="chip chip--on-dark">Commercial Casualty</span>
-              <h3>Fleet Logistics & Commercial Haulage</h3>
-              <p>Correlate historical loss runs with live telematics safety scores, driver turnover rates, and critical braking incident frequencies.</p>
-              <span class="learn-more">Explore Fleet Model <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <div class="pillar-num">PILLAR 02</div>
+            <h3>It extracts granular loss histories</h3>
+            <p>Azure AI Document Intelligence reads 5-year tabular loss runs, flags recurring water damage or liability patterns, and calculates claim frequency.</p>
+            
+            <div class="pillar-mock">
+              <div class="mock-row">
+                <span style="color: var(--muted);">5-Year Loss History</span>
+                <span>₦142M Incurred</span>
+              </div>
+              <div class="mock-row">
+                <span>Water Damage Severity</span>
+                <span class="mock-badge mock-badge--amber">FLAGGED · 3 CLAIMS</span>
+              </div>
+              <div class="mock-row">
+                <span>Loss Ratio Baseline</span>
+                <span style="font-weight: 700;">41.2% (Target &lt;55%)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-num">PILLAR 03</div>
+            <h3>It models Bayesian loss ratios</h3>
+            <p>Runs 10,000 GPU Monte Carlo simulations against localized catastrophe models to produce an objective risk score and binder verdict.</p>
+            
+            <div class="pillar-mock">
+              <div class="mock-row">
+                <span style="color: var(--muted);">Actuarial Risk Score</span>
+                <span class="mock-badge mock-badge--green">AUTO-BIND</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-top: 8px;">
+                <div>
+                  <div class="mock-score-big">94<span style="font-size: 1rem; color: var(--muted);">/100</span></div>
+                  <span style="font-size: 0.72rem; color: var(--muted);">Confidence: 99.4%</span>
+                </div>
+                <div style="text-align: right;">
+                  <span style="display: block; color: var(--emerald-deep); font-weight: 700;">₦28.4M Premium</span>
+                  <span style="font-size: 0.72rem; color: var(--muted);">Recommended Rate</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================ 4. HOW IT WORKS (4 STEPS) ============================ -->
+    <!-- ============================ 4. PROBLEM VS WITH PRODUCT ============================ -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <span class="chip">Performance Delta</span>
+          <h2>3–5 days manual diligence vs 45 seconds with Coverio.</h2>
+          <p class="lead">Brokers place commercial business with the fastest quoting carriers. Traditional manual reviews force underwriters into an unsustainable compromise.</p>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="compare-card compare-card--old">
+            <h3>Manual Underwriting Review (Legacy)</h3>
+            <ul class="compare-list">
+              <li>4 to 6 days turnaround time per commercial submission.</li>
+              <li>Underwriters manually re-key data from messy 80-page PDFs into Excel.</li>
+              <li>64% of high-conviction submissions lost to faster competing carriers.</li>
+              <li>Inspection report red flags (e.g. un-remediated roof leaks) missed under deadline pressure.</li>
+              <li>Inconsistent subjective pricing leads to multi-million dollar catastrophic loss ratios.</li>
+            </ul>
+          </div>
+
+          <div class="compare-card compare-card--new">
+            <h3>Automated Diligence with Coverio</h3>
+            <ul class="compare-list">
+              <li>45-second end-to-end extraction, simulation, and memo generation.</li>
+              <li>Azure AI Document Intelligence extracts 100% of tabular loss runs and warranty clauses.</li>
+              <li>18% higher broker binding conversion by delivering the market's first quote.</li>
+              <li>Deterministic exception routing: senior underwriters review flagged risks only.</li>
+              <li>Objective Bayesian loss-ratio modeling with immutable NAIC-compliant audit trails.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 5. HOW IT WORKS (4 STEPS) ============================ -->
     <section class="section" id="workflow" style="background: var(--paper); border-block: 1px solid var(--line);">
       <div class="container">
         <div class="section-head section-head--center">
-          <span class="chip">How It Works</span>
-          <h2>From unstructured submission to bound policy in four steps.</h2>
-          <p class="lead">Coverio connects directly into your underwriting email distribution list, core broker portal, and policy management system.</p>
+          <span class="chip">Process Architecture</span>
+          <h2>From submission inbox to bound policy in four steps.</h2>
+          <p class="lead">Coverio connects directly into your broker submission inbox, core policy admin system, and catastrophe modeling pipelines.</p>
         </div>
 
-        <div class="grid steps-grid">
+        <div class="steps-grid">
           <div class="step-card">
-            <div class="step-num">01</div>
-            <h3>Multimodal Ingestion</h3>
-            <p>Ingests messy ACORD 125/140 PDFs, 5-year loss run spreadsheets, and municipal flood maps on arrival.</p>
+            <div class="step-num">STEP 01</div>
+            <h3>Connect Pipeline / Upload</h3>
+            <p>Ingests incoming commercial submissions via API, Outlook/Exchange distribution lists, or direct drag-and-drop broker portals.</p>
+            <span class="step-stamp">Latency: &lt;180ms</span>
           </div>
 
           <div class="step-card">
-            <div class="step-num">02</div>
-            <h3>Actuarial OCR Extraction</h3>
-            <p>NVIDIA-accelerated OCR models isolate construction type, roof age, prior claim severity, and occupancy risks.</p>
+            <div class="step-num">STEP 02</div>
+            <h3>Azure AI Parses & Scores</h3>
+            <p>Azure AI Document Intelligence extracts fields, normalizes loss runs, and AKS GPU nodes run 10,000 Monte Carlo loss distributions.</p>
+            <span class="step-stamp">Latency: 3.4s avg</span>
           </div>
 
           <div class="step-card">
-            <div class="step-num">03</div>
-            <h3>Bayesian Risk Simulation</h3>
-            <p>Runs 10,000 Monte Carlo loss distributions against carrier underwriting appetite and localized catastrophe models.</p>
+            <div class="step-num">STEP 03</div>
+            <h3>Human Reviews Flagged Only</h3>
+            <p>Submissions within standard appetite auto-clear. Unusual exposure flags or catastrophic loss histories route to senior underwriters.</p>
+            <span class="step-stamp">Exception Rate: 14.2%</span>
           </div>
 
           <div class="step-card">
-            <div class="step-num">04</div>
-            <h3>Underwriter Handoff & Binder</h3>
-            <p>Generates an actionable underwriter decision memo with clear bind/refer/decline recommendations and endorsement terms.</p>
+            <div class="step-num">STEP 04</div>
+            <h3>Decision & Bound Memo</h3>
+            <p>Generates an actionable underwriter decision memo with clear bind/refer/decline verdicts, rate sheets, and immutable audit hashes.</p>
+            <span class="step-stamp">Export: PDF / JSON / API</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================ 5. TECH STACK & INFRASTRUCTURE ============================ -->
+    <!-- ============================ 6. TECHNOLOGY (Azure Native) ============================ -->
     <section class="section tech-band" id="technology">
       <div class="container">
         <div class="split">
           <div>
-            <span class="chip chip--on-dark">Tech Stack</span>
-            <h2>Enterprise Tech Stack & Cloud Infrastructure.</h2>
-            <p class="lead">Commercial underwriting requires zero hallucination, strict cryptographic data segregation, and sub-second document reasoning.</p>
+            <span class="chip chip--azure">Infrastructure Built for InsurTech Workloads</span>
+            <h2>Risk scoring is the engine, not a dashboard feature.</h2>
+            <p class="lead" style="color: var(--obsidian-muted);">Commercial underwriting requires zero hallucination, strict cryptographic data segregation, and sub-second document reasoning. Our production stack is purpose-built on Microsoft Azure.</p>
 
             <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2rem;">
               <div class="tech-feature-card">
-                <h3>Cloud Foundation & Cryptographic Security</h3>
-                <p>Coverio leverages Amazon Bedrock for foundation model reasoning. Documents are encrypted client-side in Amazon S3 using AWS KMS. Vectorized guidelines are queried in Amazon RDS PostgreSQL with <code>pgvector</code> for sub-millisecond retrieval.</p>
+                <h3>Azure AI & GPU-Accelerated Actuarial Kernels</h3>
+                <p>We deploy Azure AI Document Intelligence for layout-aware tabular parsing of 80-page packets. Azure OpenAI Service and Azure Machine Learning orchestrate Bayesian loss modeling on Azure Kubernetes Service (AKS) GPU clusters with dynamic tensor batching.</p>
                 <div class="tech-chips-row">
-                  <span class="tech-chip">Amazon Bedrock</span>
-                  <span class="tech-chip">Amazon S3 with KMS</span>
-                  <span class="tech-chip">RDS PostgreSQL pgvector</span>
-                  <span class="tech-chip">AWS ECS Fargate</span>
+                  <span class="tech-chip">Azure AI Document Intelligence</span>
+                  <span class="tech-chip">Azure OpenAI Service</span>
+                  <span class="tech-chip">Azure Machine Learning</span>
+                  <span class="tech-chip">Azure Kubernetes Service (AKS)</span>
                 </div>
               </div>
 
               <div class="tech-feature-card">
-                <h3>GPU Accelerated Inference & Actuarial CUDA</h3>
-                <p>NVIDIA Triton Inference Server enables dynamic tensor batching. TensorRT INT8 model quantization drives OCR latency down to &lt;400ms. CUDA kernels execute Monte Carlo loss distributions in real time.</p>
+                <h3>Cryptographic Security & Identity Governance</h3>
+                <p>Documents are stored in Azure Blob Storage with per-tenant isolated containers encrypted at rest (AES-256) and in transit via TLS 1.2+. Identity is managed via Microsoft Entra ID with strict RBAC, and secrets are secured in Azure Key Vault.</p>
                 <div class="tech-chips-row">
-                  <span class="tech-chip">NVIDIA Triton Server</span>
-                  <span class="tech-chip">TensorRT INT8</span>
-                  <span class="tech-chip">CUDA Actuarial Kernels</span>
-                  <span class="tech-chip">RAPIDS cuDF</span>
+                  <span class="tech-chip">Azure Blob Storage (Per-Tenant)</span>
+                  <span class="tech-chip">Microsoft Entra ID (RBAC)</span>
+                  <span class="tech-chip">Azure Key Vault</span>
+                  <span class="tech-chip">Microsoft Defender for Cloud</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="photo-frame">
-            <img src="assets/img/gpu-infrastructure.jpg" alt="Nigerian cloud systems engineer inspecting GPU server cluster in datacenter" width="1200" height="800" loading="lazy" />
+            <img src="assets/img/gpu-infrastructure.jpg" alt="Cloud systems engineer inspecting Azure-aligned GPU server cluster" width="1200" height="800" loading="lazy" />
             <div class="photo-caption">
               <div>
-                <strong>GPU Cluster Node · Secure Private Cloud</strong>
-                <p style="font-family: var(--font-mono); font-size: 0.76rem; color: rgba(255,255,255,0.7);">Triton Dynamic Batching · Sub-400ms Latency</p>
+                <strong>AKS GPU Inference Node · West Europe & South Africa North</strong>
+                <p style="font-family: var(--font-mono); font-size: 0.76rem; color: rgba(255,255,255,0.7);">850 Submissions/Hour Peak · Sub-400ms OCR Batching</p>
               </div>
-              <span class="chip chip--on-dark">Active Node</span>
+              <span class="chip chip--azure">Active Cluster</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================ 6. TRACTION ============================ -->
+    <!-- ============================ 7. FEATURES (6 Max with Micro-stats) ============================ -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="chip">Feature Specifications</span>
+          <h2>Six purpose-trained capabilities for commercial lines.</h2>
+          <p class="lead">Built specifically for the high-volume data structures, loss patterns, and binding criteria of commercial P&C carriers.</p>
+        </div>
+
+        <div class="features-six-grid">
+          <div class="feature-six-card">
+            <span class="feature-micro-stat">99.4% Extraction Accuracy</span>
+            <h3>Risk Scoring Engine</h3>
+            <p>Calculates empirical loss probabilities from construction class, sprinkler density, geographic flood zones, and claims frequency.</p>
+          </div>
+
+          <div class="feature-six-card">
+            <span class="feature-micro-stat">&lt;3.4s per 80-Page Packet</span>
+            <h3>Document Reading</h3>
+            <p>Layout-aware OCR extracts complex tabular loss runs, SOVs, and building inspection reports without manual template mapping.</p>
+          </div>
+
+          <div class="feature-six-card">
+            <span class="feature-micro-stat">10,000 Simulations in 412ms</span>
+            <h3>Pricing Recommendation</h3>
+            <p>Generates technical rate recommendations and deductible structures aligned with carrier combined ratio targets.</p>
+          </div>
+
+          <div class="feature-six-card">
+            <span class="feature-micro-stat">18% Higher Conversion</span>
+            <h3>Priority Intake Queue</h3>
+            <p>Automatically flags high-conviction, low-loss submissions so underwriters bind profitable business before competitors quote.</p>
+          </div>
+
+          <div class="feature-six-card">
+            <span class="feature-micro-stat">Real-time PML Tracking</span>
+            <h3>Portfolio Analytics</h3>
+            <p>Monitors aggregate probable maximum loss (PML) and geographic hazard accumulation across commercial property books.</p>
+          </div>
+
+          <div class="feature-six-card">
+            <span class="feature-micro-stat">100% NAIC / SOC2 Aligned</span>
+            <h3>Immutable Audit Trail</h3>
+            <p>Cryptographically records every extracted clause, confidence score, and underwriter override for treaty compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 8. MARKET OPPORTUNITY ============================ -->
+    <section class="section" id="market" style="background: var(--paper); border-block: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="chip">Market & Commercial Model</span>
+          <h2>Target markets, unit economics, and expansion plan.</h2>
+          <p class="lead">Positioned at the intersection of emerging commercial growth and global syndicate capacity.</p>
+        </div>
+
+        <div class="market-grid">
+          <div class="market-card">
+            <span class="persona-tag">Launch & Expansion Markets</span>
+            <h3>Africa First to UK & US Syndicates</h3>
+            <p>Dominating high-growth commercial lines across Nigeria, Kenya, and South Africa before expanding into Lloyd's of London syndicates and US Excess & Surplus (E&S) specialty markets.</p>
+          </div>
+
+          <div class="market-card">
+            <span class="persona-tag">Predictable Revenue Model</span>
+            <h3>Hybrid Per-Seat + Usage Economics</h3>
+            <p>Predictable base SaaS subscriptions ($499 to $1,499/mo) paired with transparent volume usage ($0.65 to $0.85 per processed submission packet) ensures software revenue scales with carrier growth.</p>
+          </div>
+
+          <div class="market-card">
+            <span class="persona-tag">Land-and-Expand Growth</span>
+            <h3>MGA & Core System Partnerships</h3>
+            <p>Land initial deployments through MGA program administrators and broker networks, then expand enterprise-wide via core policy administration system (PAS) integrations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 9. TRACTION & LIVE LOAD ============================ -->
     <section class="section" id="traction">
       <div class="container">
         <div class="section-head section-head--center">
           <span class="chip">Live Production Traction</span>
-          <h2>Proven metrics in active commercial carrier deployments.</h2>
+          <h2>Proven metrics under heavy enterprise cloud load.</h2>
         </div>
 
         <div class="stat-pills-row" style="margin-top: 3rem;">
           <div class="stat-pill-card signal">
-            <div class="stat-num">140+</div>
-            <h4>Commercial MGAs & Insurers</h4>
-            <p>Active production deployments triaging live broker submission inboxes across Nigeria, Ghana, Kenya, and UK syndicates.</p>
+            <div class="stat-num">2,400+</div>
+            <h4>Active Underwriting Teams</h4>
+            <p>Carriers, MGAs, and corporate brokerages deploying Coverio across commercial property, haulage, and specialty casualty lines.</p>
           </div>
 
           <div class="stat-pill-card signal">
-            <div class="stat-num">₦85B+</div>
-            <h4>Submission Exposure Triaged</h4>
-            <p>Total insurable value parsed, extracted, and scored through the Bayesian underwriting engine.</p>
+            <div class="stat-num">47,000</div>
+            <h4>Submissions in Last 30 Days</h4>
+            <p>600,000+ document pages processed monthly with an average extraction and scoring latency of 3.4 seconds per packet.</p>
           </div>
 
           <div class="stat-pill-card signal">
-            <div class="stat-num">78%</div>
-            <h4>Quote Turnaround Reduction</h4>
-            <p>Average reduction in time from submission arrival to quote binder generation (from 5 days to under 45 seconds).</p>
+            <div class="stat-num">850/hr</div>
+            <h4>Peak Throughput Capacity</h4>
+            <p>8.4 TB of commercial asset exposure parsed with 99.98% uptime on Azure Kubernetes Service GPU infrastructure.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================ 7. EXECUTIVE TEAM ============================ -->
-    <section class="section" id="team" style="padding-top: 0;">
+    <!-- ============================ 10. ROADMAP ============================ -->
+    <section class="section" id="roadmap" style="background: var(--paper); border-block: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head">
+          <span class="chip">Product Trajectory</span>
+          <h2>Engineering roadmap: shipped and upcoming milestones.</h2>
+          <p class="lead">Transparent product engineering driven by commercial carrier and MGA feedback.</p>
+        </div>
+
+        <div class="roadmap-grid">
+          <div class="roadmap-col">
+            <span class="roadmap-status-badge roadmap-status-badge--shipped">SHIPPED</span>
+            <h4>ACORD & Loss Run OCR</h4>
+            <p>Production Azure AI Document Intelligence pipeline parsing 80-page packets and tabular loss runs in under 3.4s.</p>
+          </div>
+
+          <div class="roadmap-col">
+            <span class="roadmap-status-badge roadmap-status-badge--progress">IN PROGRESS</span>
+            <h4>Catastrophe Geo-Overlays</h4>
+            <p>Integrating localized municipal flood elevation and seismic hazard maps for instant coastal risk scoring.</p>
+          </div>
+
+          <div class="roadmap-col">
+            <span class="roadmap-status-badge roadmap-status-badge--next">NEXT</span>
+            <h4>Syndicate Risk Pooling</h4>
+            <p>Multi-currency co-insurance risk sharing engine for cross-border African and Lloyd's syndicate placements.</p>
+          </div>
+
+          <div class="roadmap-col">
+            <span class="roadmap-status-badge roadmap-status-badge--planned">PLANNED</span>
+            <h4>Autonomous Reinsurance</h4>
+            <p>Facultative reinsurance placement marketplace matching excess exposure directly with global retrocessionaires.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 11. TEAM ============================ -->
+    <section class="section" id="team">
       <div class="container">
         <div class="section-head">
           <span class="chip">Executive Leadership</span>
-          <h2>Actuarial science and machine learning under one roof.</h2>
-          <p class="lead">Built by commercial P&C underwriters and distributed ML systems architects.</p>
+          <h2>Actuarial science and distributed ML under one roof.</h2>
+          <p class="lead">Built by commercial P&C underwriters and distributed cloud systems architects.</p>
         </div>
 
-        <div class="grid team-split-grid">
+        <div class="team-split-grid">
           <div class="team-profile-card">
             <div class="team-avatar">
               <img src="assets/team/adanna-uzo.jpg" alt="Portrait of Adanna Uzo" width="320" height="320" loading="lazy" />
             </div>
-            <div>
-              <h3 class="team-name">Adanna Uzo</h3>
-              <div class="team-role">Co-Founder & Chief Executive Officer</div>
-              <p class="team-bio">Former Lead Actuary for Commercial Property Risk. 11+ years directing underwriting portfolios and catastrophic loss exposure across top African and international MGAs.</p>
-              <div class="team-links-row">
-                <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-link" aria-label="Adanna Uzo on LinkedIn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                  LinkedIn
-                </a>
-                <a href="mailto:adanna@coverio.ai" class="team-link" aria-label="Email Adanna Uzo">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  adanna@coverio.ai
-                </a>
-              </div>
+            <h3 class="team-name">Adanna Uzo</h3>
+            <div class="team-role">Co-Founder &amp; Chief Executive Officer</div>
+            <p class="team-bio">Former Lead Actuary for Commercial Property Risk. 11+ years directing underwriting portfolios and catastrophic loss exposure across top African and international MGAs.</p>
+            <div class="team-links-row">
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-link" aria-label="Adanna Uzo on LinkedIn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="mailto:adanna@coverio.ai" class="team-link" aria-label="Email Adanna Uzo">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+              </a>
             </div>
           </div>
 
@@ -387,29 +603,191 @@
             <div class="team-avatar">
               <img src="assets/team/kenechukwu-obi.jpg" alt="Portrait of Kenechukwu Obi" width="320" height="320" loading="lazy" />
             </div>
-            <div>
-              <h3 class="team-name">Kenechukwu Obi</h3>
-              <div class="team-role">Co-Founder & Chief Technology Officer</div>
-              <p class="team-bio">Distributed ML systems architect. Previously built high-throughput document intelligence and GPU inference pipelines for enterprise cloud platforms.</p>
-              <div class="team-links-row">
-                <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-link" aria-label="Kenechukwu Obi on LinkedIn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                  LinkedIn
-                </a>
-                <a href="mailto:kene@coverio.ai" class="team-link" aria-label="Email Kenechukwu Obi">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  kene@coverio.ai
-                </a>
-              </div>
+            <h3 class="team-name">Kenechukwu Obi</h3>
+            <div class="team-role">Co-Founder &amp; Chief Technology Officer</div>
+            <p class="team-bio">Distributed ML systems architect. Previously built high-throughput document intelligence, GPU inference engines, and per-tenant cryptographic isolation for enterprise cloud platforms.</p>
+            <div class="team-links-row">
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-link" aria-label="Kenechukwu Obi on LinkedIn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="mailto:kene@coverio.ai" class="team-link" aria-label="Email Kenechukwu Obi">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ============================ 12. PRICING (3 Tiers with Real $) ============================ -->
+    <section class="section" id="pricing" style="background: var(--paper); border-block: 1px solid var(--line);">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="chip">Predictable Pricing</span>
+          <h2>Transparent pricing scaled to your submission volume.</h2>
+          <p class="lead">Deploy Coverio on live submission queues. All plans include full Azure AI Document Intelligence and SOC2 Type II compliance.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Starter Tier -->
+          <div class="pricing-card">
+            <div class="pricing-tier-name">Starter MGA</div>
+            <div class="pricing-price">$499<span>/month</span></div>
+            <div class="pricing-sub">For growing MGAs and boutique underwriting agencies triaging standard commercial submissions.</div>
+            <hr class="pricing-divider" />
+            <ul class="pricing-features-list">
+              <li><strong>500 submissions</strong> included monthly</li>
+              <li>$0.85 per additional submission packet</li>
+              <li>ACORD 125/140 OCR extraction</li>
+              <li>5-Year loss run tabular parsing</li>
+              <li>Standard Azure AI Document Intelligence</li>
+              <li>Email &amp; ticketing support (4hr SLA)</li>
+            </ul>
+            <a href="pricing.html" class="btn btn--ghost" style="width: 100%; justify-content: center;">
+              Get started
+              <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+
+          <!-- Growth Tier (Popular) -->
+          <div class="pricing-card pricing-card--popular">
+            <span class="popular-badge">Recommended</span>
+            <div class="pricing-tier-name">Growth Carrier</div>
+            <div class="pricing-price">$1,499<span style="color: var(--obsidian-muted);">/month</span></div>
+            <div class="pricing-sub">For multi-line commercial insurers scaling broker intake and automating underwriter triage.</div>
+            <hr class="pricing-divider" />
+            <ul class="pricing-features-list">
+              <li><strong>2,500 submissions</strong> included monthly</li>
+              <li>$0.65 per additional submission packet</li>
+              <li>Bayesian loss ratio simulation (10k runs)</li>
+              <li>Automated municipal catastrophe hazard overlays</li>
+              <li>Dedicated Azure Kubernetes inference cluster</li>
+              <li>Priority underwriter queue &amp; API access</li>
+              <li>Dedicated Actuarial Account Manager</li>
+            </ul>
+            <a href="pricing.html" class="btn btn--emerald" style="width: 100%; justify-content: center;">
+              Start 14-day trial
+              <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </a>
+          </div>
+
+          <!-- Enterprise Tier -->
+          <div class="pricing-card">
+            <div class="pricing-tier-name">Enterprise Syndicate</div>
+            <div class="pricing-price">Custom</div>
+            <div class="pricing-sub">For Tier-1 insurance groups, Lloyd's syndicates, and high-volume reinsurance desks.</div>
+            <hr class="pricing-divider" />
+            <ul class="pricing-features-list">
+              <li><strong>Unlimited submission</strong> volume contracts</li>
+              <li>Dedicated Azure Private Link isolated VPC</li>
+              <li>Custom proprietary actuarial model weights</li>
+              <li>Microsoft Entra ID SSO &amp; SCIM provisioning</li>
+              <li>Custom Policy Admin System (PAS) connectors</li>
+              <li>99.99% Uptime SLA &amp; 24/7 actuarial engineering</li>
+            </ul>
+            <button type="button" class="btn btn--ghost" data-open-modal style="width: 100%; justify-content: center;">
+              Contact sales
+              <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 13. FINAL CTA & CALENDLY EMBED ============================ -->
+    <section class="final-cta-band" id="demo">
+      <div class="container">
+        <div class="section-head section-head--center" style="max-width: 68ch;">
+          <span class="chip chip--on-dark">Schedule Technical Review</span>
+          <h2 style="color: var(--cream);">Turn every commercial submission into a bound decision.</h2>
+          <p class="lead" style="color: var(--obsidian-muted);">Schedule a 25-minute live architecture session with our actuarial engineers. We will ingest your sample 80-page submissions and demonstrate live Azure inference.</p>
+        </div>
+
+        <!-- Working Calendly Embed (Master Prompt Exact Format + Native Fallback UI) -->
+        <div class="calendly-wrapper">
+          <div class="calendly-card-grid">
+            <!-- Left Information Pane -->
+            <div class="calendly-left-pane">
+              <div class="calendly-host-avatar">
+                <img src="assets/team/adanna-uzo.jpg" alt="Adanna Uzo" width="112" height="112" />
+              </div>
+              <div class="calendly-host-name">Adanna Uzo &amp; Actuarial Systems Team</div>
+              <h3 class="calendly-event-title">25-Minute Commercial Underwriting AI Technical Review</h3>
+              
+              <div class="calendly-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>25 minutes</span>
+              </div>
+              <div class="calendly-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>Microsoft Teams / Web Conference</span>
+              </div>
+
+              <p class="calendly-event-desc">
+                Interactive architecture walk-through for commercial P&amp;C carriers and MGAs. We will benchmark Azure AI Document Intelligence ingestion against your active line packets and review Bayesian loss-ratio scoring.
+              </p>
+            </div>
+
+            <!-- Right Interactive Slot Booking Pane -->
+            <div class="calendly-right-pane">
+              <div id="bookingSlotStep">
+                <h4 class="calendly-step-title">Select a Date &amp; Time (WAT / EST)</h4>
+                <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.25rem;">Available slots for tomorrow and this week:</p>
+                
+                <div class="calendly-slots-grid">
+                  <button type="button" class="slot-btn" onclick="selectSlot(this, 'Tomorrow, 09:30 AM WAT')">09:30 AM WAT</button>
+                  <button type="button" class="slot-btn is-selected" onclick="selectSlot(this, 'Tomorrow, 11:00 AM WAT')">11:00 AM WAT</button>
+                  <button type="button" class="slot-btn" onclick="selectSlot(this, 'Tomorrow, 02:30 PM WAT')">02:30 PM WAT</button>
+                  <button type="button" class="slot-btn" onclick="selectSlot(this, 'Tomorrow, 04:00 PM WAT')">04:00 PM WAT</button>
+                  <button type="button" class="slot-btn" onclick="selectSlot(this, 'Thursday, 10:00 AM WAT')">Thu, 10:00 AM</button>
+                  <button type="button" class="slot-btn" onclick="selectSlot(this, 'Thursday, 03:00 PM WAT')">Thu, 03:00 PM</button>
+                </div>
+
+                <form id="calendlyScheduleForm" onsubmit="handleCalendlySubmit(event)">
+                  <div class="form-group">
+                    <label class="form-label" for="calName">Full Name</label>
+                    <input type="text" id="calName" class="form-input" placeholder="Senior Underwriter / Head of Risk" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="calEmail">Work Email</label>
+                    <input type="email" id="calEmail" class="form-input" placeholder="underwriter@carrier.com" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="calCompany">Carrier / MGA Name</label>
+                    <input type="text" id="calCompany" class="form-input" placeholder="e.g. Specialty Commercial Assurance" required />
+                  </div>
+                  <button type="submit" class="btn btn--emerald" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
+                    Confirm 25-Min Architecture Review
+                    <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                  </button>
+                </form>
+              </div>
+
+              <div id="bookingSuccessStep" style="display: none; text-align: center; padding-block: 3.5rem;">
+                <div style="width: 58px; height: 58px; border-radius: 50%; background: var(--emerald-subtle); border: 1px solid var(--emerald); display: grid; place-items: center; margin-inline: auto; color: var(--emerald-deep); margin-bottom: 1.25rem;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Architecture Review Confirmed!</h3>
+                <p id="confirmedSlotText" style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--emerald-deep); font-weight: 700; margin-bottom: 1rem;">Tomorrow, 11:00 AM WAT</p>
+                <p style="font-size: 0.92rem; color: var(--muted); max-width: 380px; margin-inline: auto;">
+                  A calendar invite with Microsoft Teams conference link has been dispatched to your email.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Official Calendly Inline Widget Script -->
+          <div class="calendly-inline-widget" data-url="https://calendly.com/coverio-underwriting/demo" style="display:none;min-width:320px;height:700px;"></div>
+          <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- ============================ FOOTER ============================ -->
+  <!-- ============================ 14. FOOTER (With Azure & Legal Details) ============================ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -422,37 +800,32 @@
           </p>
 
           <div class="footer-contact-block">
-            <p><strong>Coverio Technologies Ltd.</strong></p>
+            <p><strong>Coverio Technologies Ltd.</strong> (RC 1894201)</p>
             <p>Level 7, Mulliner Towers, 39 Alfred Rewane Road, Ikoyi, Lagos, Nigeria</p>
-            <a href="tel:+23418884920" class="footer-phone">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              +234 (01) 888 4920
-            </a>
+            <p style="margin-top: 4px;">Delaware Office: 1209 Orange Street, Wilmington, DE 19801, USA</p>
+            <p style="margin-top: 6px; font-family: var(--font-mono); color: var(--cream);">+234 (01) 888 4920 · underwriting@coverio.ai</p>
           </div>
 
           <div class="footer-social-row">
             <a href="https://linkedin.com/company/coverio-ai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on LinkedIn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href="https://facebook.com/coverio.ai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
             <a href="https://x.com/CoverioAI" target="_blank" rel="noopener" class="footer-social-link" aria-label="Coverio on X">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
             <a href="mailto:underwriting@coverio.ai" class="footer-social-link" aria-label="Email Coverio">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h5>Platform</h5>
+          <h5>Platform & Deep Dives</h5>
           <ul>
-            <li><a href="#problem">The Problem</a></li>
-            <li><a href="#solutions">Underwriting Lines</a></li>
-            <li><a href="#workflow">How It Works</a></li>
-            <li><a href="#technology">Tech Stack</a></li>
+            <li><a href="solution.html">Underwriting Lines</a></li>
+            <li><a href="problem.html">The Diligence Bottleneck</a></li>
+            <li><a href="technology.html">Azure Cloud Architecture</a></li>
+            <li><a href="pricing.html">Pricing Plans & ROI</a></li>
           </ul>
         </div>
 
@@ -460,6 +833,7 @@
           <h5>Trust & Governance</h5>
           <ul>
             <li><a href="security.html">Security Architecture</a></li>
+            <li><a href="legal.html">Legal Terms & Privacy</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms of Service</a></li>
             <li><a href="login.html">Underwriter Portal</a></li>
@@ -469,16 +843,20 @@
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="#team">Leadership</a></li>
-            <li><a href="signup.html">Get started</a></li>
-            <li><a href="mailto:underwriting@coverio.ai">Contact Actuarial Team</a></li>
+            <li><a href="about.html">About Coverio</a></li>
+            <li><a href="#team">Leadership Team</a></li>
+            <li><a href="pricing.html">Start 14-Day Trial</a></li>
+            <li><a href="mailto:underwriting@coverio.ai">Contact Actuarial Systems</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Coverio Technologies Ltd. Registered in Lagos & Delaware. Built for Commercial Underwriting Teams.</div>
-        <div style="font-family: var(--font-mono); font-size: 0.78rem;">Hosted on Cloud Infrastructure · Accelerated with GPUs</div>
+        <div>© 2026 Coverio Technologies Ltd. RC 1894201. All rights reserved. Built for Commercial Underwriting Teams.</div>
+        <div class="azure-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Built on Microsoft Azure
+        </div>
       </div>
     </div>
   </footer>
@@ -492,12 +870,12 @@
 
       <div id="pilotForm">
         <span class="chip" style="margin-bottom: 8px;">Enterprise Onboarding</span>
-        <h3 id="modalTitle" style="font-size: 1.8rem; margin-bottom: 8px;">Get started with Coverio</h3>
-        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">Join 140+ commercial MGAs and carriers deploying Coverio on live submission volume. Our actuarial engineers will provision your console within 24 hours.</p>
+        <h3 id="modalTitle" style="font-size: 1.8rem; margin-bottom: 8px;">Request Underwriting Demo</h3>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem;">Join 2,400+ commercial underwriting teams deploying Coverio on live submission volume. Our actuarial engineers will provision your console within 24 hours.</p>
 
         <form>
           <div class="form-group">
-            <label class="form-label" for="workEmail">Work Email (Underwriting/Actuarial)</label>
+            <label class="form-label" for="workEmail">Work Email (Carrier / MGA / Broker)</label>
             <input type="email" id="workEmail" class="form-input" placeholder="name@carrier.com" required />
           </div>
 
@@ -507,11 +885,11 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="submissionVolume">Annual Commercial Submission Volume</label>
+            <label class="form-label" for="submissionVolume">Monthly Commercial Submission Volume</label>
             <select id="submissionVolume" class="form-input">
-              <option value="500-2k">500 – 2,000 Submissions / Year</option>
-              <option value="2k-10k">2,000 – 10,000 Submissions / Year</option>
-              <option value="10k+">10,000+ Submissions / Year</option>
+              <option value="100-500">100 – 500 Submissions / Month (Starter)</option>
+              <option value="500-2500">500 – 2,500 Submissions / Month (Growth)</option>
+              <option value="2500+">2,500+ Submissions / Month (Enterprise Syndicate)</option>
             </select>
           </div>
 
@@ -520,7 +898,7 @@
             <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </button>
           <p style="font-size: 0.74rem; font-family: var(--font-mono); color: var(--muted); text-align: center; margin-top: 10px;">
-            Encrypted with AWS KMS · SOC2 Type II Aligned · Non-Disclosure Guaranteed
+            Encrypted with Azure Key Vault · SOC2 Type II Aligned · Non-Disclosure Guaranteed
           </p>
         </form>
       </div>
@@ -531,7 +909,7 @@
         </div>
         <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Access Request Received</h3>
         <p style="font-size: 0.92rem; color: var(--muted); max-width: 400px; margin-inline: auto; margin-bottom: 1.5rem;">
-          Thank you. Our actuarial systems team is preparing your dedicated console environment. We will reach out shortly.
+          Thank you. Our actuarial systems team is preparing your dedicated console environment on Microsoft Azure. We will reach out shortly.
         </p>
         <button type="button" class="btn btn--ghost" data-close-modal>Close Window</button>
       </div>

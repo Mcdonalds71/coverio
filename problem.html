@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request Enterprise Pilot — Coverio</title>
-  <meta name="description" content="Request pilot access to Coverio's AI Commercial Underwriting & Loss Due Diligence Engine on Microsoft Azure." />
+  <title>The Commercial Underwriting Bottleneck — Coverio</title>
+  <meta name="description" content="Why manual commercial submission review causes 64% submission loss and multi-million dollar unpriced catastrophe claims for P&C insurers and MGAs." />
   <meta name="theme-color" content="#080E13" />
-  <link rel="canonical" href="https://coverio.ai/signup.html" />
+  <link rel="canonical" href="https://coverio.ai/problem.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,20 +14,21 @@
 
   <link rel="stylesheet" href="assets/styles.css?v=10.0" />
 </head>
-<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; background: var(--cream);">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Header -->
   <header class="site-header scrolled" id="siteHeader">
     <div class="container">
       <a href="index.html" class="brand" aria-label="Coverio Home">
         <svg class="brand-mark" viewBox="0 0 44 44" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="44" height="44" rx="12" fill="#0A1117" stroke="#1C2833" stroke-width="1.5"/>
-          <path d="M22 8L34 14.5V28L22 35L10 28V14.5L22 8Z" fill="url(#coverioGradSub)" stroke="#10B981" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M22 8L34 14.5V28L22 35L10 28V14.5L22 8Z" fill="url(#coverioGradPr)" stroke="#10B981" stroke-width="1.8" stroke-linejoin="round"/>
           <path d="M22 13L30 17.5V25.5L22 30L14 25.5V17.5L22 13Z" stroke="#34D399" stroke-width="1.2" stroke-dasharray="2.5 2.5" stroke-opacity="0.8"/>
           <path d="M17.5 18C15.8 19.8 15.8 23.2 17.5 25C19.2 26.8 22.8 26.8 24.5 25" stroke="#F5F1E9" stroke-width="2.4" stroke-linecap="round"/>
           <circle cx="25.5" cy="18" r="2.2" fill="#D97706"/>
           <defs>
-            <linearGradient id="coverioGradSub" x1="22" y1="8" x2="22" y2="35" gradientUnits="userSpaceOnUse">
+            <linearGradient id="coverioGradPr" x1="22" y1="8" x2="22" y2="35" gradientUnits="userSpaceOnUse">
               <stop stop-color="#10B981" stop-opacity="0.32"/>
               <stop offset="1" stop-color="#0A1117" stop-opacity="0.08"/>
             </linearGradient>
@@ -36,7 +37,7 @@
         <span class="brand-text">Coverio<span>.</span></span>
       </a>
 
-            <nav class="nav-links" aria-label="Primary Navigation">
+                  <nav class="nav-links" aria-label="Primary Navigation">
         <div class="nav-dropdown">
           <span class="nav-dropdown-trigger">
             Platform
@@ -85,79 +86,74 @@
     </div>
   </header>
 
-    <!-- Fullscreen Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu" data-open="false">
-    <a href="solution.html">Solutions</a>
-    <a href="problem.html">The Problem</a>
-    <a href="technology.html">Technology &amp; Stack</a>
-    <a href="pricing.html">Pricing Plans</a>
-    <a href="security.html">Security Architecture</a>
-    <a href="about.html">About Coverio</a>
-    <a href="login.html">Underwriter Login</a>
-    <button type="button" class="btn btn--primary" style="margin-top: 1.5rem;" data-open-modal>
-      Book live demo
-      <span class="btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-    </button>
-  </div>
+  <main id="main" style="padding-top: 120px;">
+    
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--center" style="max-width: 65ch;">
+          <span class="chip">The Commercial Underwriting Crisis</span>
+          <h1>Why manual document review is costing carriers millions.</h1>
+          <p class="lead">Commercial insurance submissions are overwhelming carrier capacity. 80-page unstructured packets with dense loss runs, building inspection surveys, and ACORD schedules sit in triage queues for 4 to 6 business days.</p>
+        </div>
 
-<main style="display: grid; place-items: center; padding: 2.5rem 1.5rem;">
-    <div class="modal-box" style="max-width: 540px; width: 100%;">
-      <span class="chip" style="margin-bottom: 8px;">Enterprise Onboarding</span>
-      <h1 style="font-size: 2.2rem; margin-bottom: 8px;">Request Pilot Console</h1>
-      <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.75rem;">Deploy Coverio on your commercial property, casualty, and haulage submission flow. Dedicated Azure compute instance provisioned in 24 hours.</p>
-
-      <form id="signupForm" action="#" method="POST" onsubmit="event.preventDefault(); document.getElementById('signupForm').style.display='none'; document.getElementById('signupSuccess').style.display='block';">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-          <div class="form-group">
-            <label class="form-label" for="firstName">First Name</label>
-            <input type="text" id="firstName" class="form-input" placeholder="Adanna" required />
+        <div class="stat-pills-row" style="margin-top: 4rem;">
+          <div class="stat-pill-card signal">
+            <div class="stat-num">64%</div>
+            <h4>Lost Broker Submissions</h4>
+            <p>Commercial brokers place business with the fastest quoting carriers. Every day a submission waits decreases binding conversion by 18%.</p>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="lastName">Last Name</label>
-            <input type="text" id="lastName" class="form-input" placeholder="Uzo" required />
+
+          <div class="stat-pill-card signal">
+            <div class="stat-num">₦4.2B+</div>
+            <h4>Preventable Catastrophic Exposure</h4>
+            <p>Carriers absorb millions in avoidable claims because overworked underwriters skim 60-page inspection reports and miss critical warranty exclusions.</p>
+          </div>
+
+          <div class="stat-pill-card signal">
+            <div class="stat-num">82 hrs</div>
+            <h4>Wasted on Manual Data Entry</h4>
+            <p>Senior actuaries spend over 20 hours per week re-typing numbers from PDF loss run spreadsheets into legacy rating engines.</p>
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="workEmail">Work Email (Underwriting/Actuarial)</label>
-          <input type="email" id="workEmail" class="form-input" placeholder="name@carrier.com" required />
+        <!-- Deep Dive Breakdown -->
+        <div style="background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 3rem; margin-top: 4rem;">
+          <div class="split">
+            <div>
+              <span class="chip">Root Cause Analysis</span>
+              <h2 style="font-size: 2.2rem; margin-top: 0.5rem;">The Fatal Underwriting Dilemma</h2>
+              <p class="lead" style="margin-top: 0.75rem;">Underwriters face an impossible daily trade-off:</p>
+              <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem;">
+                <div style="padding: 1.25rem; background: #FFF1F2; border: 1px solid #FECDD3; border-radius: var(--radius-sm);">
+                  <strong style="color: #9F1239;">Option A: Skim & Quote Fast</strong>
+                  <p style="font-size: 0.9rem; color: #881337; margin-top: 4px;">Quote within 24 hours to win the broker's deal, but miss latent water damage histories and un-remediated fire hazards that cause 80%+ loss ratios.</p>
+                </div>
+                <div style="padding: 1.25rem; background: #FFF1F2; border: 1px solid #FECDD3; border-radius: var(--radius-sm);">
+                  <strong style="color: #9F1239;">Option B: Perform Thorough Manual Diligence</strong>
+                  <p style="font-size: 0.9rem; color: #881337; margin-top: 4px;">Spend 5 days carefully auditing every ACORD form and inspection note, only to find the corporate broker already bound coverage with a faster competitor.</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div style="background: #FFFFFF; border: 1px solid var(--line); border-radius: var(--radius); padding: 2.25rem;">
+                <span class="chip">The Coverio Solution</span>
+                <h3 style="font-size: 1.7rem; margin-top: 0.75rem;">Extract, Score, and Bind in Under 45 Seconds.</h3>
+                <p style="font-size: 0.92rem; color: var(--muted); margin-top: 0.75rem; line-height: 1.6;">Coverio eliminates the trade-off. With layout-aware Azure AI Document Intelligence and GPU-accelerated Bayesian simulations, underwriters deliver the market's first quote while maintaining 100% rigorous actuarial diligence.</p>
+                <div style="margin-top: 1.75rem;">
+                  <a href="solution.html" class="btn btn--primary">
+                    See How Coverio Fixes This
+                    <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="orgName">Carrier, MGA, or Brokerage Name</label>
-          <input type="text" id="orgName" class="form-input" placeholder="e.g. Leadway Commercial Specialty" required />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="linesOfBusiness">Primary Lines of Business</label>
-          <select id="linesOfBusiness" class="form-input">
-            <option value="property">Commercial Property & High-Rise Infrastructure</option>
-            <option value="casualty">Commercial General Liability & Heavy Haulage</option>
-            <option value="multi">Multi-Line Commercial Package / Syndicate</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;">
-          Submit Pilot Application
-          <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </button>
-
-        <p style="font-size: 0.74rem; font-family: var(--font-mono); color: var(--muted); text-align: center; margin-top: 12px;">
-          Encrypted with Azure Key Vault · SOC2 Type II Aligned · Non-Disclosure Guaranteed
-        </p>
-      </form>
-
-      <div id="signupSuccess" style="display: none; text-align: center; padding-block: 2rem;">
-        <div style="width: 52px; height: 52px; border-radius: 50%; background: var(--emerald-subtle); border: 1px solid var(--emerald); display: grid; place-items: center; margin-inline: auto; color: var(--emerald-deep); margin-bottom: 1.25rem;">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        </div>
-        <h2 style="font-size: 2rem; margin-bottom: 8px;">Application Received</h2>
-        <p style="font-size: 0.92rem; color: var(--muted); max-width: 420px; margin-inline: auto; margin-bottom: 1.75rem;">
-          Thank you. Our actuarial systems team is preparing your dedicated Microsoft Azure sandbox console. We will reach out within 24 hours.
-        </p>
-        <a href="index.html" class="btn btn--ghost">Return to Homepage</a>
       </div>
-    </div>
+    </section>
+
   </main>
 
     <!-- ============================ FOOTER ============================ -->
@@ -249,14 +245,28 @@
             <label class="form-label" for="workEmail">Work Email</label>
             <input type="email" id="workEmail" class="form-input" placeholder="underwriter@carrier.com" required />
           </div>
+          <div class="form-group">
+            <label class="form-label" for="companyName">Organization</label>
+            <input type="text" id="companyName" class="form-input" placeholder="Carrier or MGA Name" required />
+          </div>
           <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: 0.5rem; justify-content: center;">
-            Schedule Live Review
+            Provision Console Access
             <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </button>
+          <p style="font-size: 0.74rem; font-family: var(--font-mono); color: var(--muted); text-align: center; margin-top: 10px;">
+            Encrypted with Azure Key Vault &middot; SOC2 Type II Aligned
+          </p>
         </form>
+      </div>
+      <div id="pilotFormSuccess" style="display: none; text-align: center; padding-block: 2rem;">
+        <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Access Request Received</h3>
+        <p style="font-size: 0.92rem; color: var(--muted); margin-bottom: 1.5rem;">Our actuarial systems team will provision your dedicated console within 24 hours.</p>
+        <button type="button" class="btn btn--ghost" data-close-modal>Close</button>
       </div>
     </div>
   </div>
+
+
 
   <script src="assets/app.js"></script>
 </body>
